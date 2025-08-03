@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Price List App
 
 A React + TypeScript + Vite application with automated deployment via GitHub Actions.
@@ -64,3 +65,6 @@ The base path is automatically configured for GitHub Pages deployment.
 ├── .github/workflows/ # GitHub Actions
 └── vite.config.ts    # Vite configuration
 ```
+=======
+# price-list
+>>>>>>> 9b4b43b (first commit)
