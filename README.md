@@ -1,69 +1,66 @@
-# React + TypeScript + Vite
+# Price List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript + Vite application with automated deployment via GitHub Actions.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19 with TypeScript
+- Vite for fast development and building
+- Automatic deployment to Vercel via GitHub Actions
+- Responsive design with modern CSS
 
-## Expanding the ESLint configuration
+## Development
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Install dependencies
+npm install
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Start development server
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+# Build for production
+npm run build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project automatically deploys to GitHub Pages when code is pushed to the main branch using GitHub Actions.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Setup GitHub Pages Deployment
+
+1. **Enable GitHub Pages:**
+   - Go to your repository → Settings → Pages
+   - Under "Source", select "GitHub Actions"
+
+2. **Deployment Workflow:**
+   - Automatically deploys when pushing to `main` branch
+   - Can also be triggered manually from the Actions tab
+
+The workflow will:
+- ✅ Install dependencies
+- ✅ Build the project
+- ✅ Deploy to GitHub Pages
+- 🔄 Site will be available at: `https://yourusername.github.io/price-list/`
+
+### Local Development vs Production
+
+- **Local**: Runs on `http://localhost:8888`
+- **Production**: Deployed to `https://yourusername.github.io/price-list/`
+
+The base path is automatically configured for GitHub Pages deployment.
+
+## Project Structure
+
+```
+├── src/
+│   ├── components/     # React components
+│   ├── data/          # Static data
+│   ├── styles/        # CSS files
+│   └── main.tsx       # App entry point
+├── public/            # Static assets
+├── .github/workflows/ # GitHub Actions
+└── vite.config.ts    # Vite configuration
 ```
