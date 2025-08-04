@@ -138,12 +138,6 @@
   z-index: 1;
 }
 
-.header {
-  margin-bottom: 60px;
-  padding: 60px 40px 0 40px;
-  position: relative;
-}
-
 .header-content {
   max-width: 1000px;
   margin: 0 auto;

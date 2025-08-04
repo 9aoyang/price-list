@@ -1,9 +1,13 @@
 .service-detail {
-  padding: 80px 60px;
+  padding: 20px 40px;
   max-width: 1024px;
   margin: 0 auto;
   background: none;
   animation: fadeInUp 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .pricing-table {
@@ -16,12 +20,16 @@
   border: 1px solid rgba(139, 124, 108, 0.12);
   border-radius: 20px;
   margin: 0 auto;
-  padding: 50px 40px;
+  padding: 30px 30px;
   box-shadow: 0 8px 32px rgba(139, 124, 108, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(15px);
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .pricing-table::before {
@@ -48,10 +56,11 @@
 .table-header {
   display: grid;
   grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr;
-  margin-bottom: 50px;
-  padding: 0 30px 25px 30px;
+  margin-bottom: 20px;
+  padding: 0 20px 15px 20px;
   position: relative;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .table-header::after {
@@ -89,19 +98,21 @@
 }
 
 .table-body {
-  padding: 0 40px;
+  padding: 0 20px;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .table-row {
   display: grid;
   grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr;
   align-items: center;
-  min-height: 100px;
-  margin-bottom: 30px;
+  min-height: 80px;
+  margin-bottom: 20px;
   border-radius: 12px;
   position: relative;
   gap: 10px;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 .table-row::before {
@@ -125,7 +136,7 @@
 }
 
 .table-row > div {
-  padding: 20px 15px;
+  padding: 15px 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -139,7 +150,7 @@
 }
 
 .col-name {
-  font-size: 22px;
+  font-size: 20px;
   color: #2c2c2c;
   font-weight: 300;
   text-align: center;
@@ -149,9 +160,9 @@
 }
 
 .price-item {
-  font-size: 19px;
+  font-size: 17px;
   color: #8b7c6c;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   line-height: 1.4;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -162,7 +173,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   position: relative;
-  padding: 8px 16px;
+  padding: 6px 12px;
   border-radius: 12px;
 }
 
@@ -203,11 +214,12 @@
 /* iPad Portrait Optimization */
 @media (max-width: 768px) and (orientation: portrait) {
   .service-detail {
-    padding: 60px 20px;
+    padding: 15px 20px;
+    height: calc(100vh - 120px);
   }
 
   .pricing-table {
-    padding: 30px 20px;
+    padding: 20px 15px;
   }
 
   .table-header {
@@ -235,11 +247,12 @@
 /* Mobile Responsive Design */
 @media (max-width: 767px) {
   .service-detail {
-    padding: 60px 20px;
+    padding: 15px 20px;
+    height: calc(100vh - 120px);
   }
 
   .pricing-table {
-    padding: 24px;
+    padding: 20px;
     border-radius: 20px;
     margin: 0 4px;
   }
@@ -314,13 +327,14 @@
   .service-detail {
     max-width: 900px;
     margin: 0 auto;
-    padding: 100px 50px;
+    padding: 15px 40px;
+    height: calc(100vh - 120px);
   }
 
   .table-header {
     grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr;
-    margin-bottom: 50px;
-    padding: 0 30px 25px 30px;
+    margin-bottom: 20px;
+    padding: 0 20px 15px 20px;
   }
 
   .table-header::after {
@@ -341,18 +355,18 @@
   }
 
   .table-body {
-    padding: 0 30px;
+    padding: 0 20px;
   }
 
   .table-row {
     grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr;
-    min-height: 110px;
-    margin-bottom: 35px;
+    min-height: 80px;
+    margin-bottom: 20px;
     background: none;
   }
 
   .table-row > div {
-    padding: 25px 15px;
+    padding: 15px 10px;
   }
 
   .table-row > div:last-child {
@@ -379,7 +393,8 @@
 /* Tablet Landscape Optimization */
 @media (min-width: 1025px) and (max-width: 1366px) {
   .service-detail {
-    padding: 100px 50px;
+    padding: 20px 50px;
+    height: calc(100vh - 140px);
   }
 }
 

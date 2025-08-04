@@ -1,5 +1,4 @@
 .header {
-  margin-bottom: 60px;
   padding: 60px 40px 0 40px;
   position: relative;
 }
@@ -13,12 +12,12 @@
 .back-button {
   background: none;
   border: none;
-  color: #8B7C6C;
+  color: #8b7c6c;
   padding: 16px;
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
-  -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
   touch-action: manipulation;
   font-weight: 300;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -74,17 +73,18 @@
   font-size: 3.2em;
   font-weight: 300;
   margin: 0 0 16px 0;
-  background: linear-gradient(135deg,
-    #2C2C2C 0%,
-    #4A4A4A 30%,
-    #6B5C4C 60%,
-    #8B7C6C 100%
+  background: linear-gradient(
+    135deg,
+    #2c2c2c 0%,
+    #4a4a4a 30%,
+    #6b5c4c 60%,
+    #8b7c6c 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: -0.03em;
-  font-family: "Inter", "SF Pro Display", -apple-system, sans-serif;
+  font-family: 'Inter', 'SF Pro Display', -apple-system, sans-serif;
   position: relative;
   filter: drop-shadow(0 4px 8px rgba(139, 124, 108, 0.1));
 }
@@ -92,24 +92,24 @@
 .subtitle {
   font-size: 1.1em;
   font-weight: 400;
-  color: #8B7C6C;
+  color: #8b7c6c;
   margin: 0;
   letter-spacing: 0.8px;
   opacity: 0.85;
-  font-family: "Inter", "SF Pro Display", -apple-system, sans-serif;
+  font-family: 'Inter', 'SF Pro Display', -apple-system, sans-serif;
 }
 
 .breadcrumb {
   font-size: 2em;
   font-weight: 400;
-  color: #2C2C2C;
+  color: #2c2c2c;
   text-align: center;
   letter-spacing: -0.03em;
-  font-family: "Inter", "SF Pro Display", -apple-system, sans-serif;
+  font-family: 'Inter', 'SF Pro Display', -apple-system, sans-serif;
   width: 100%;
   margin: 0;
   animation: slideInDown 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-  background: linear-gradient(135deg, #2C2C2C 0%, #4A4A4A 50%, #6B5C4C 100%);
+  background: linear-gradient(135deg, #2c2c2c 0%, #4a4a4a 50%, #6b5c4c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -203,7 +203,7 @@
     font-size: 26px;
     background: none;
     border: none;
-    color: #8B7C6C;
+    color: #8b7c6c;
     opacity: 0.8;
     left: 30px;
   }
