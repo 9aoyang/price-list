@@ -7,5 +7,17 @@ export default defineConfig({
   server: {
     host: true,
     port: 8888
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom']
+        }
+      }
+    }
   }
 })
