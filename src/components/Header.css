@@ -1,0 +1,223 @@
+.header {
+  margin-bottom: 60px;
+  padding: 60px 40px 0 40px;
+  position: relative;
+}
+
+.header-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #8B7C6C;
+  padding: 16px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+  touch-action: manipulation;
+  font-weight: 300;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  z-index: 10;
+  animation: slideInLeft 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.back-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(139, 124, 108, 0.08);
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.back-button:active {
+  opacity: 1;
+  transform: scale(0.92);
+  background: rgba(139, 124, 108, 0.1);
+  border-radius: 50%;
+}
+
+.back-button:active::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+  background: rgba(139, 124, 108, 0.15);
+}
+
+.main-title {
+  text-align: center;
+  padding: 20px 0;
+  animation: slideInDown 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.main-title h1 {
+  font-size: 3.2em;
+  font-weight: 300;
+  margin: 0 0 16px 0;
+  background: linear-gradient(135deg,
+    #2C2C2C 0%,
+    #4A4A4A 30%,
+    #6B5C4C 60%,
+    #8B7C6C 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.03em;
+  font-family: "Inter", "SF Pro Display", -apple-system, sans-serif;
+  position: relative;
+  filter: drop-shadow(0 4px 8px rgba(139, 124, 108, 0.1));
+}
+
+.subtitle {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #8B7C6C;
+  margin: 0;
+  letter-spacing: 0.8px;
+  opacity: 0.85;
+  font-family: "Inter", "SF Pro Display", -apple-system, sans-serif;
+}
+
+.breadcrumb {
+  font-size: 2em;
+  font-weight: 400;
+  color: #2C2C2C;
+  text-align: center;
+  letter-spacing: -0.03em;
+  font-family: "Inter", "SF Pro Display", -apple-system, sans-serif;
+  width: 100%;
+  margin: 0;
+  animation: slideInDown 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: linear-gradient(135deg, #2C2C2C 0%, #4A4A4A 50%, #6B5C4C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  padding: 16px 0;
+}
+
+.breadcrumb::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(139, 124, 108, 0.3) 20%,
+    rgba(139, 124, 108, 0.6) 50%,
+    rgba(139, 124, 108, 0.3) 80%,
+    transparent
+  );
+  border-radius: 1px;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px) translateY(-50%);
+  }
+  to {
+    opacity: 0.7;
+    transform: translateX(0) translateY(-50%);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* iPad Portrait Optimization */
+@media (max-width: 768px) and (orientation: portrait) {
+  .main-title h1 {
+    font-size: 2.8em;
+  }
+
+  .subtitle {
+    font-size: 1em;
+  }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 767px) {
+  .header {
+    padding: 40px 20px 0 20px;
+    margin-bottom: 40px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .back-button {
+    left: 20px;
+    min-width: 48px;
+    min-height: 48px;
+    font-size: 22px;
+  }
+
+  .breadcrumb {
+    font-size: 1.4em;
+    padding: 12px 0;
+  }
+}
+
+/* iPad Landscape Optimization */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .back-button {
+    min-height: 52px;
+    min-width: 52px;
+    padding: 18px;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: #8B7C6C;
+    opacity: 0.8;
+    left: 30px;
+  }
+
+  .breadcrumb {
+    font-size: 1.6em;
+  }
+
+  .back-button::before {
+    width: 44px;
+    height: 44px;
+  }
+
+  .back-button:active::before {
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
