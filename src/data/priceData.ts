@@ -32,7 +32,6 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-1',
     name: 'BTL',
-    icon: '⚡',
     subCategories: [
       {
         id: 'sub-1',
@@ -271,7 +270,7 @@ export const priceData: MainCategory[] = [
                 },
                 {
                   type: '首次体验',
-                  price: 5980
+                  price: 6980
                 }
               ],
               package: [
@@ -301,7 +300,6 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-2',
     name: 'INDIBA',
-    icon: '🔥',
     subCategories: [
       {
         id: 'sub-1',
@@ -400,7 +398,6 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-3',
     name: 'Basic  FACIAL',
-    icon: '💧',
     subCategories: [
       {
         id: 'sub-default-1',
@@ -533,7 +530,6 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-4',
     name: 'Basic  Body',
-    icon: '🌿',
     subCategories: [
       {
         id: 'sub-default-1',
@@ -690,7 +686,6 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-5',
     name: 'Deluxe-SWISS',
-    icon: '💎',
     subCategories: [
       {
         id: 'sub-default-1',
@@ -895,7 +890,6 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-6',
     name: 'cellllight',
-    icon: '✨',
     subCategories: [
       {
         id: 'sub-default-1',
@@ -1004,7 +998,6 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-7',
     name: '精致美肌',
-    icon: '🌸',
     subCategories: [
       {
         id: 'sub-default-1',
@@ -1209,7 +1202,6 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-8',
     name: '私人订制',
-    icon: '👑',
     subCategories: [
       {
         id: 'sub-default-1',

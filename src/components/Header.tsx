@@ -7,18 +7,23 @@ interface HeaderProps {
   onBack: () => void
 }
 
-export default function Header({ view, mainCategory, service, onBack }: HeaderProps) {
+export default function Header({
+  view,
+  mainCategory,
+  service,
+  onBack
+}: HeaderProps) {
   const getBreadcrumb = () => {
     const breadcrumbs: string[] = []
-    
+
     if (mainCategory) {
       breadcrumbs.push(mainCategory)
     }
-    
+
     if (service) {
       breadcrumbs.push(service)
     }
-    
+
     return breadcrumbs
   }
 
@@ -37,7 +42,7 @@ export default function Header({ view, mainCategory, service, onBack }: HeaderPr
         {view === 'main' ? (
           <div className='main-title'>
             <h1>LumenBeauty</h1>
-            <p className='subtitle'>专业美肌 • 精致护理 • 品质生活</p>
+            <p className='subtitle'>以光为笔，雕刻时光中的永恒肌韵</p>
           </div>
         ) : (
           getBreadcrumb().length > 0 && (

@@ -17,7 +17,6 @@ export default function MainMenu({ categories, onCategorySelect }: MainMenuProps
             onClick={() => onCategorySelect(category)}
             style={{ animationDelay: `${(index + 1) * 0.1}s` }}
           >
-            <div className='category-icon'>{category.icon}</div>
             <h2>{category.name}</h2>
             <div className='subcategory-count'>
               {category.subCategories.length} 个分类
