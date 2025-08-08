@@ -1,13 +1,13 @@
 .service-detail {
+  width: 100%;
+  height: 100%;
   padding: 20px 40px;
-  max-width: 1024px;
-  margin: 0 auto;
   background: none;
   animation: fadeInUp 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-  height: calc(100vh - 140px);
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  flex: 1;
 }
 
 .pricing-table {
@@ -244,81 +244,182 @@
   }
 }
 
+/* 移动端价格卡片样式 */
+.mobile-price-cards {
+  display: none;
+}
+
+.service-title {
+  font-size: 2em;
+  font-weight: 300;
+  color: #2c2c2c;
+  text-align: center;
+  margin: 0 0 30px 0;
+  letter-spacing: -0.02em;
+  font-family: 'SF Pro Display', -apple-system, sans-serif;
+  background: linear-gradient(135deg, #2c2c2c 0%, #4a4a4a 50%, #6b5c4c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.price-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.price-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(250, 249, 246, 0.7) 50%,
+    rgba(245, 243, 240, 0.8) 100%
+  );
+  border: 1px solid rgba(139, 124, 108, 0.12);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(139, 124, 108, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  position: relative;
+}
+
+.price-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.4) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(139, 124, 108, 0.04) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+.price-card-header {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 124, 108, 0.08) 0%,
+    rgba(164, 149, 133, 0.05) 100%
+  );
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.price-card-title {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #2c2c2c;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: 'SF Pro Display', -apple-system, sans-serif;
+}
+
+.price-card-content {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.mobile-price-item {
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #8b7c6c;
+  background: linear-gradient(135deg, #8b7c6c 0%, #a4958d 50%, #bda99f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.mobile-price-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(139, 124, 108, 0.02);
+  border-radius: 12px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.mobile-price-item:active::before {
+  opacity: 1;
+  background: rgba(139, 124, 108, 0.06);
+}
+
 /* Mobile Responsive Design */
 @media (max-width: 767px) {
   .service-detail {
-    padding: 15px 20px;
-    height: calc(100vh - 120px);
+    padding: 20px 16px;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    align-items: flex-start;
   }
 
-  .pricing-table {
-    padding: 20px;
-    border-radius: 20px;
-    margin: 0 4px;
-  }
-
-  .table-header {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin-bottom: 30px;
-    padding: 0 0 20px 0;
-  }
-
-  .table-header > div {
-    text-align: center;
-    padding: 8px 0;
-    font-size: 12px;
-    background: rgba(139, 124, 108, 0.05);
-    border-radius: 8px;
-    margin-bottom: 4px;
-  }
-
-  .table-body {
-    padding: 0;
-  }
-
-  .table-row {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 16px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 16px rgba(139, 124, 108, 0.08);
-  }
-
-  .table-row::before {
+  /* 隐藏桌面版本的表格 */
+  .desktop-table {
     display: none;
   }
 
-  .table-row > div {
-    text-align: center;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(139, 124, 108, 0.1);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.4);
-    margin-bottom: 8px;
+  /* 显示移动端卡片 */
+  .mobile-price-cards {
+    display: block;
+    flex: 1;
   }
 
-  .table-row > div:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
+  .service-title {
+    font-size: 1.8em;
+    margin-bottom: 24px;
   }
 
-  .col-name {
+  .price-cards-grid {
+    gap: 16px;
+  }
+
+  .price-card-header {
+    padding: 16px;
+  }
+
+  .price-card-title {
     font-size: 1.2em;
-    font-weight: 500;
-    background: linear-gradient(
-      135deg,
-      rgba(139, 124, 108, 0.1) 0%,
-      rgba(164, 149, 133, 0.08) 100%
-    );
+    letter-spacing: 0.3px;
   }
 
-  .price-item {
+  .price-card-content {
+    padding: 20px 16px;
+    gap: 10px;
+  }
+
+  .mobile-price-item {
+    padding: 14px 16px;
     font-size: 16px;
-    padding: 6px 12px;
-    margin-bottom: 8px;
   }
 }
 

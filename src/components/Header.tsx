@@ -30,13 +30,21 @@ export default function Header({
   return (
     <header className='header'>
       {view !== 'main' && (
-        <button
+        <div
           className='back-button'
           onClick={onBack}
+          role='button'
+          tabIndex={0}
           aria-label='返回上一级'
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault()
+              onBack()
+            }
+          }}
         >
           ←
-        </button>
+        </div>
       )}
       <div className='header-content'>
         {view === 'main' ? (

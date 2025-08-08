@@ -12,13 +12,16 @@
 }
 
 .subcategory-section {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(248, 247, 245, 0.6) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(248, 247, 245, 0.6) 100%
+  );
   border: none;
   border-radius: 24px;
   padding: 50px 40px;
   position: relative;
-  box-shadow:
-    0 8px 32px rgba(139, 124, 108, 0.06),
+  box-shadow: 0 8px 32px rgba(139, 124, 108, 0.06),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
 }
@@ -27,11 +30,11 @@
   margin: 0 0 40px 0;
   font-size: 1.8em;
   font-weight: 300;
-  color: #2C2C2C;
+  color: #2c2c2c;
   border: none;
   padding: 0;
   letter-spacing: -0.02em;
-  font-family: "SF Pro Display", -apple-system, sans-serif;
+  font-family: 'SF Pro Display', -apple-system, sans-serif;
   text-align: center;
   position: relative;
 }
@@ -64,7 +67,8 @@
 }
 
 .service-card {
-  background: linear-gradient(145deg,
+  background: linear-gradient(
+    145deg,
     rgba(255, 255, 255, 0.9) 0%,
     rgba(250, 249, 246, 0.8) 50%,
     rgba(245, 243, 240, 0.85) 100%
@@ -78,8 +82,7 @@
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   text-align: center;
   position: relative;
-  box-shadow:
-    0 3px 16px rgba(139, 124, 108, 0.08),
+  box-shadow: 0 3px 16px rgba(139, 124, 108, 0.08),
     0 1px 3px rgba(139, 124, 108, 0.05);
   backdrop-filter: blur(10px);
   overflow: hidden;
@@ -97,7 +100,8 @@
   right: -1px;
   bottom: -1px;
   border-radius: 20px;
-  background: linear-gradient(135deg,
+  background: linear-gradient(
+    135deg,
     rgba(139, 124, 108, 0.08) 0%,
     rgba(164, 149, 133, 0.06) 50%,
     rgba(139, 124, 108, 0.08) 100%
@@ -115,8 +119,11 @@
   right: 0;
   bottom: 0;
   border-radius: 20px;
-  background:
-    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.6) 0%, transparent 50%),
+  background: radial-gradient(
+      circle at 25% 25%,
+      rgba(255, 255, 255, 0.6) 0%,
+      transparent 50%
+    ),
     linear-gradient(135deg, rgba(139, 124, 108, 0.02) 0%, transparent 70%);
   opacity: 0;
   transition: all 0.35s ease;
@@ -125,11 +132,11 @@
 
 .service-card:active {
   transform: scale(0.98);
-  box-shadow:
-    0 2px 12px rgba(139, 124, 108, 0.15),
+  box-shadow: 0 2px 12px rgba(139, 124, 108, 0.15),
     0 1px 4px rgba(139, 124, 108, 0.1);
   border-color: rgba(139, 124, 108, 0.25);
-  background: linear-gradient(145deg,
+  background: linear-gradient(
+    145deg,
     rgba(245, 243, 240, 0.9) 0%,
     rgba(240, 237, 234, 0.8) 50%,
     rgba(235, 232, 229, 0.85) 100%
@@ -148,9 +155,9 @@
   margin: 0 0 16px 0;
   font-size: 1.6em;
   font-weight: 500;
-  color: #2C2C2C;
+  color: #2c2c2c;
   letter-spacing: -0.02em;
-  font-family: "Inter", "SF Pro Display", -apple-system, sans-serif;
+  font-family: 'Inter', 'SF Pro Display', -apple-system, sans-serif;
   line-height: 1.3;
   height: 2.6em;
   display: -webkit-box;
@@ -159,21 +166,21 @@
   overflow: hidden;
   text-overflow: ellipsis;
   transition: all 0.3s ease;
-  background: linear-gradient(135deg, #2C2C2C 0%, #4A4A4A 100%);
+  background: linear-gradient(135deg, #2c2c2c 0%, #4a4a4a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .service-card:active h4 {
-  background: linear-gradient(135deg, #1A1A1A 0%, #2C2C2C 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .service-description {
-  color: #8B7C6C;
+  color: #8b7c6c;
   font-size: 0.95em;
   margin: 12px 0;
   line-height: 1.5;
@@ -184,26 +191,14 @@
 
 .service-card:active .service-description {
   opacity: 1;
-  color: #8B7C6C;
+  color: #8b7c6c;
 }
 
 .price-preview {
   font-weight: 600;
   font-size: 1.1em;
   letter-spacing: 0.3px;
-  opacity: 0.9;
-  transition: all 0.3s ease;
-  background: linear-gradient(135deg,
-    #B8860B 0%,
-    #DAA520 30%,
-    #FFD700 50%,
-    #FFA500 70%,
-    #FF8C00 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 2px 4px rgba(139, 124, 108, 0.1);
+  color: #8b7c6c;
   position: relative;
 }
 
@@ -271,13 +266,13 @@
 /* Mobile Responsive Design */
 @media (max-width: 767px) {
   .subcategory-menu {
-    padding: 20px;
+    padding: 16px;
   }
 
   .subcategory-section {
-    padding: 30px 20px;
+    padding: 30px 16px;
     border-radius: 18px;
-    margin: 0 4px;
+    margin: 0;
   }
 
   .subcategory-title {
@@ -291,9 +286,9 @@
   }
 
   .service-card {
-    padding: 28px 20px;
+    padding: 28px 16px;
     border-radius: 16px;
-    margin: 0 4px;
+    margin: 0;
   }
 
   .service-card h4 {

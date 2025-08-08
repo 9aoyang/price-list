@@ -14,53 +14,26 @@
   border: none;
   color: #8b7c6c;
   padding: 16px;
-  border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   font-weight: 300;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 48px;
   min-height: 48px;
-  position: absolute;
-  left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
+  position: fixed;
+  left: 20px;
+  top: 20px;
   opacity: 0.7;
-  z-index: 10;
-  animation: slideInLeft 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.back-button::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(139, 124, 108, 0.08);
-  opacity: 0;
-  transition: all 0.4s ease;
-  z-index: -1;
+  z-index: 1000;
+  user-select: none;
 }
 
 .back-button:active {
   opacity: 1;
-  transform: scale(0.92);
-  background: rgba(139, 124, 108, 0.1);
-  border-radius: 50%;
-}
-
-.back-button:active::before {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.2);
-  background: rgba(139, 124, 108, 0.15);
 }
 
 .main-title {
@@ -136,17 +109,6 @@
   border-radius: 1px;
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px) translateY(-50%);
-  }
-  to {
-    opacity: 0.7;
-    transform: translateX(0) translateY(-50%);
-  }
-}
-
 @keyframes slideInDown {
   from {
     opacity: 0;
@@ -172,7 +134,7 @@
 /* Mobile Responsive Design */
 @media (max-width: 767px) {
   .header {
-    padding: 40px 20px 0 20px;
+    padding: 40px 16px 0 16px;
     margin-bottom: 40px;
   }
 
@@ -182,10 +144,14 @@
   }
 
   .back-button {
-    left: 20px;
+    left: 16px;
+    top: 16px;
     min-width: 48px;
     min-height: 48px;
     font-size: 22px;
+    position: fixed;
+    z-index: 1000;
+    padding: 14px;
   }
 
   .breadcrumb {
@@ -199,13 +165,12 @@
   .back-button {
     min-height: 52px;
     min-width: 52px;
-    padding: 18px;
+    padding: 16px;
     font-size: 26px;
-    background: none;
-    border: none;
-    color: #8b7c6c;
-    opacity: 0.8;
-    left: 30px;
+    left: 20px;
+    top: 20px;
+    position: fixed;
+    z-index: 1000;
   }
 
   .breadcrumb {

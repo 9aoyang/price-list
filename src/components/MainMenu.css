@@ -199,7 +199,7 @@
 /* Mobile Responsive Design */
 @media (max-width: 767px) {
   .main-menu {
-    padding: 20px;
+    padding: 16px;
   }
 
   .category-grid {
@@ -208,9 +208,9 @@
   }
 
   .main-category-card {
-    padding: 40px 24px;
+    padding: 40px 16px;
     border-radius: 20px;
-    margin: 0 8px;
+    margin: 0;
   }
 
   .category-icon {

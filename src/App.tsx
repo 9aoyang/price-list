@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './styles/global.css'
 import { priceData } from './data/priceData'
 import type { MainCategory, SubCategory, ServiceItem } from './data/priceData'
@@ -27,6 +27,9 @@ function App() {
 
     setIsTransitioning(true)
 
+    // 立即滚动到顶部
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+
     setTimeout(() => {
       setNavigation(newNavigation)
 
@@ -35,6 +38,11 @@ function App() {
       }, 50)
     }, 300)
   }
+
+  // 监听页面变化，确保滚动到顶部
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [navigation.view])
 
   const navigateToSubCategory = (mainCategory: MainCategory) => {
     smoothTransition({ view: 'subcategory', mainCategory })
