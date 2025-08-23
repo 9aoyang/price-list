@@ -44,7 +44,7 @@ export const priceData: MainCategory[] = [
               single: [
                 {
                   type: '单次',
-                  price: 2980
+                  price: 2680
                 }
               ],
               firstTime: [
@@ -70,8 +70,32 @@ export const priceData: MainCategory[] = [
             }
           },
           {
+            id: 'service-1-1',
+            name: 'EMFUSION高光炫肤',
+            prices: {
+              single: [
+                {
+                  type: '单次',
+                  price: 3280
+                }
+              ],
+              firstTime: [
+                {
+                  type: '首次体验',
+                  price: 2680
+                }
+              ],
+              package: [
+                {
+                  type: '疗程价格',
+                  price: '21600/10次'
+                }
+              ]
+            }
+          },
+          {
             id: 'service-2',
-            name: 'BTL360pro局部（上面部/眼部/下面部/颈部任选）',
+            name: 'BTL360pro局部（上面部/面中部/颈部任选）',
             prices: {
               single: [
                 {
@@ -82,21 +106,13 @@ export const priceData: MainCategory[] = [
               firstTime: [
                 {
                   type: '首次体验',
-                  price: 2880
+                  price: 2380
                 }
               ],
               package: [
                 {
                   type: '疗程价格',
-                  price: '16800/6次'
-                },
-                {
-                  type: '疗程价格',
-                  price: '25800/10次'
-                },
-                {
-                  type: '疗程价格',
-                  price: '48000/24次'
+                  price: '14800/6次'
                 }
               ]
             }
@@ -190,7 +206,7 @@ export const priceData: MainCategory[] = [
               package: [
                 {
                   type: '疗程价格',
-                  price: '22800/10次'
+                  price: '23800/10次'
                 }
               ]
             }
@@ -512,7 +528,7 @@ export const priceData: MainCategory[] = [
               firstTime: [
                 {
                   type: '首次体验',
-                  price: 228
+                  price: 268
                 }
               ],
               package: [
@@ -644,7 +660,7 @@ export const priceData: MainCategory[] = [
               firstTime: [
                 {
                   type: '首次体验',
-                  price: 280
+                  price: 298
                 }
               ],
               package: [
@@ -668,7 +684,7 @@ export const priceData: MainCategory[] = [
               firstTime: [
                 {
                   type: '首次体验',
-                  price: 298
+                  price: 328
                 }
               ],
               package: [
@@ -1016,13 +1032,13 @@ export const priceData: MainCategory[] = [
               firstTime: [
                 {
                   type: '首次体验',
-                  price: 780
+                  price: 980
                 }
               ],
               package: [
                 {
                   type: '疗程价格',
-                  price: '包年'
+                  price: '780/包年'
                 }
               ]
             }
@@ -1040,13 +1056,13 @@ export const priceData: MainCategory[] = [
               firstTime: [
                 {
                   type: '首次体验',
-                  price: 980
+                  price: 1280
                 }
               ],
               package: [
                 {
                   type: '疗程价格',
-                  price: '包年'
+                  price: '980/包年'
                 }
               ]
             }
@@ -1064,13 +1080,13 @@ export const priceData: MainCategory[] = [
               firstTime: [
                 {
                   type: '首次体验',
-                  price: 2680
+                  price: 3080
                 }
               ],
               package: [
                 {
                   type: '疗程价格',
-                  price: '包年'
+                  price: '2680/包年'
                 }
               ]
             }
@@ -1088,13 +1104,13 @@ export const priceData: MainCategory[] = [
               firstTime: [
                 {
                   type: '首次体验',
-                  price: 3680
+                  price: 4080
                 }
               ],
               package: [
                 {
                   type: '疗程价格',
-                  price: '包年'
+                  price: '3680/包年'
                 }
               ]
             }
@@ -1112,13 +1128,13 @@ export const priceData: MainCategory[] = [
               firstTime: [
                 {
                   type: '首次体验',
-                  price: 2980
+                  price: 3580
                 }
               ],
               package: [
                 {
                   type: '疗程价格',
-                  price: '包年'
+                  price: '2980/包年'
                 }
               ]
             }
@@ -1136,13 +1152,13 @@ export const priceData: MainCategory[] = [
               firstTime: [
                 {
                   type: '首次体验',
-                  price: 4080
+                  price: 4680
                 }
               ],
               package: [
                 {
                   type: '疗程价格',
-                  price: '包年'
+                  price: '4080/包年'
                 }
               ]
             }
@@ -1160,13 +1176,13 @@ export const priceData: MainCategory[] = [
               firstTime: [
                 {
                   type: '首次体验',
-                  price: 4980
+                  price: 5680
                 }
               ],
               package: [
                 {
                   type: '疗程价格',
-                  price: '包年'
+                  price: '4980/包年'
                 }
               ]
             }
@@ -1184,13 +1200,13 @@ export const priceData: MainCategory[] = [
               firstTime: [
                 {
                   type: '首次体验',
-                  price: 5680
+                  price: 6680
                 }
               ],
               package: [
                 {
                   type: '疗程价格',
-                  price: '包年'
+                  price: '5680/包年'
                 }
               ]
             }
