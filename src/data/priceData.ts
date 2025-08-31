@@ -31,7 +31,7 @@ export interface MainCategory {
 
 // 8个系列的完整价目表数据
 export const priceData: MainCategory[] = [
-  // 1. BTL系列
+  // 1. BTL系列 (4个子分类，7个服务)
   {
     id: 'series-1',
     name: 'BTL',
@@ -68,7 +68,7 @@ export const priceData: MainCategory[] = [
         ]
       },
       {
-        id: 'sub-2', 
+        id: 'sub-2',
         name: 'NEW Ultra360',
         services: [
           {
@@ -159,7 +159,7 @@ export const priceData: MainCategory[] = [
     ]
   },
 
-  // 2. INDIBA系列
+  // 2. INDIBA系列 (2个子分类，3个服务)
   {
     id: 'series-2',
     name: 'INDIBA',
@@ -210,7 +210,7 @@ export const priceData: MainCategory[] = [
     ]
   },
 
-  // 3. Basic FACIAL系列
+  // 3. Basic FACIAL系列 (1个子分类，5个服务)
   {
     id: 'series-3',
     name: 'Basic FACIAL',
@@ -248,15 +248,6 @@ export const priceData: MainCategory[] = [
           },
           {
             id: 'service-14',
-            name: 'Aqua清净化管理',
-            prices: {
-              single: [{ type: '单次', price: 880 }],
-              firstTime: [{ type: '首次体验', price: 658 }],
-              package: [{ type: '疗程价格', price: '5680/10次' }]
-            }
-          },
-          {
-            id: 'service-14-1',
             name: 'Aqua水润净化管理',
             prices: {
               single: [{ type: '单次', price: 880 }],
@@ -278,7 +269,7 @@ export const priceData: MainCategory[] = [
     ]
   },
 
-  // 4. Basic Body系列
+  // 4. Basic Body系列 (1个子分类，6个服务)
   {
     id: 'series-4',
     name: 'Basic Body',
@@ -346,7 +337,7 @@ export const priceData: MainCategory[] = [
     ]
   },
 
-  // 5. Deluxe-SWISS系列
+  // 5. Deluxe-SWISS系列 (1个子分类，8个服务)
   {
     id: 'series-5',
     name: 'Deluxe-SWISS',
@@ -432,7 +423,7 @@ export const priceData: MainCategory[] = [
     ]
   },
 
-  // 6. celllight系列
+  // 6. celllight系列 (1个子分类，4个服务)
   {
     id: 'series-6',
     name: 'celllight',
@@ -482,7 +473,7 @@ export const priceData: MainCategory[] = [
     ]
   },
 
-  // 7. 精致美肌系列
+  // 7. 精致美肌系列 (1个子分类，8个服务)
   {
     id: 'series-7',
     name: '精致美肌',
@@ -568,143 +559,7 @@ export const priceData: MainCategory[] = [
     ]
   },
 
-  // 6. celllight系列
-  {
-    id: 'series-6',
-    name: 'celllight',
-    subCategories: [
-      {
-        id: 'sub-1',
-        name: 'celllight',
-        services: [
-          {
-            id: 'service-30',
-            name: 'celllight光子嫩肤-单模式',
-            prices: {
-              single: [{ type: '单次', price: 1580 }],
-              firstTime: [{ type: '首次体验', price: 1280 }],
-              package: [{ type: '疗程价格', price: '6800/6次' }]
-            }
-          },
-          {
-            id: 'service-31',
-            name: 'celllight光子嫩肤-全模式',
-            prices: {
-              single: [{ type: '单次', price: 2280 }],
-              firstTime: [{ type: '首次体验', price: 1680 }],
-              package: [{ type: '疗程价格', price: '8800/6次' }]
-            }
-          },
-          {
-            id: 'service-32',
-            name: 'celllight牛奶光',
-            prices: {
-              single: [{ type: '单次', price: 1280 }],
-              firstTime: [{ type: '首次体验', price: 1180 }],
-              package: [{ type: '疗程价格', price: '9800/10次' }]
-            }
-          },
-          {
-            id: 'service-33',
-            name: '光动力',
-            prices: {
-              single: [{ type: '单次', price: 1280 }],
-              firstTime: [{ type: '首次体验', price: 880 }],
-              package: [{ type: '疗程价格', price: '6800/10次' }]
-            }
-          }
-        ]
-      }
-    ]
-  },
-
-  // 7. 精致美肌系列
-  {
-    id: 'series-7',
-    name: '精致美肌',
-    subCategories: [
-      {
-        id: 'sub-1',
-        name: '精致美肌',
-        services: [
-          {
-            id: 'service-34',
-            name: '上下唇部',
-            prices: {
-              single: [{ type: '单次', price: 1280 }],
-              firstTime: [{ type: '首次体验', price: 980 }],
-              package: [{ type: '疗程价格', price: '780/包年' }]
-            }
-          },
-          {
-            id: 'service-35',
-            name: '腋下',
-            prices: {
-              single: [{ type: '单次', price: 1680 }],
-              firstTime: [{ type: '首次体验', price: 1280 }],
-              package: [{ type: '疗程价格', price: '980' }]
-            }
-          },
-          {
-            id: 'service-36',
-            name: '小手臂',
-            prices: {
-              single: [{ type: '单次', price: 3280 }],
-              firstTime: [{ type: '首次体验', price: 3080 }],
-              package: [{ type: '疗程价格', price: '2680' }]
-            }
-          },
-          {
-            id: 'service-37',
-            name: '全手臂（包含小手臂）',
-            prices: {
-              single: [{ type: '单次', price: 4680 }],
-              firstTime: [{ type: '首次体验', price: 4080 }],
-              package: [{ type: '疗程价格', price: '3680' }]
-            }
-          },
-          {
-            id: 'service-38',
-            name: '小腿',
-            prices: {
-              single: [{ type: '单次', price: 3980 }],
-              firstTime: [{ type: '首次体验', price: 3580 }],
-              package: [{ type: '疗程价格', price: '2980' }]
-            }
-          },
-          {
-            id: 'service-39',
-            name: '全腿部（包含小腿）',
-            prices: {
-              single: [{ type: '单次', price: 4980 }],
-              firstTime: [{ type: '首次体验', price: 4680 }],
-              package: [{ type: '疗程价格', price: '4080' }]
-            }
-          },
-          {
-            id: 'service-40',
-            name: '比基尼VI',
-            prices: {
-              single: [{ type: '单次', price: 5980 }],
-              firstTime: [{ type: '首次体验', price: 5680 }],
-              package: [{ type: '疗程价格', price: '4980' }]
-            }
-          },
-          {
-            id: 'service-41',
-            name: '比基尼VIO',
-            prices: {
-              single: [{ type: '单次', price: 6800 }],
-              firstTime: [{ type: '首次体验', price: 6680 }],
-              package: [{ type: '疗程价格', price: '5680' }]
-            }
-          }
-        ]
-      }
-    ]
-  },
-
-  // 8. 私人订制系列
+  // 8. 私人订制系列 (1个子分类，5个服务)
   {
     id: 'series-8',
     name: '私人订制',
