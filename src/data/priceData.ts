@@ -35,11 +35,11 @@ export const priceData: MainCategory[] = [
     subCategories: [
       {
         id: 'sub-1',
-        name: '360pro',
+        name: 'EMFUSION',
         services: [
           {
             id: 'service-1',
-            name: 'EMFUSION美肤炫',
+            name: 'EMFUSION美芙炫',
             prices: {
               single: [
                 {
@@ -56,21 +56,21 @@ export const priceData: MainCategory[] = [
               package: [
                 {
                   type: '疗程价格',
-                  price: '8800/6次'
-                },
-                {
-                  type: '疗程价格',
                   price: '13800/10次'
                 },
                 {
                   type: '疗程价格',
                   price: '28800/24次'
+                },
+                {
+                  type: '疗程价格',
+                  price: '52800/48次'
                 }
               ]
             }
           },
           {
-            id: 'service-1-1',
+            id: 'service-2',
             name: 'EMFUSION高光炫肤',
             prices: {
               single: [
@@ -89,12 +89,22 @@ export const priceData: MainCategory[] = [
                 {
                   type: '疗程价格',
                   price: '21600/10次'
+                },
+                {
+                  type: '疗程价格',
+                  price: '38600/20次'
                 }
               ]
             }
-          },
+          }
+        ]
+      },
+      {
+        id: 'sub-2',
+        name: 'NEW Ultra360',
+        services: [
           {
-            id: 'service-2',
+            id: 'service-3',
             name: 'BTL360pro局部（上面部/面中部/颈部任选）',
             prices: {
               single: [
@@ -113,12 +123,20 @@ export const priceData: MainCategory[] = [
                 {
                   type: '疗程价格',
                   price: '14800/6次'
+                },
+                {
+                  type: '疗程价格',
+                  price: '19800/10次'
+                },
+                {
+                  type: '疗程价格',
+                  price: '43800/24次'
                 }
               ]
             }
           },
           {
-            id: 'service-3',
+            id: 'service-4',
             name: 'BTL360pro全脸抗衰胶原再生',
             prices: {
               single: [
@@ -150,8 +168,8 @@ export const priceData: MainCategory[] = [
             }
           },
           {
-            id: 'service-4',
-            name: 'BTL360pro面眼颈提拉轮廓紧致',
+            id: 'service-5',
+            name: 'BTL360pro面眼颈轮廓紧致',
             prices: {
               single: [
                 {
@@ -184,11 +202,11 @@ export const priceData: MainCategory[] = [
         ]
       },
       {
-        id: 'sub-2',
-        name: 'Prolift治疗方案',
+        id: 'sub-3',
+        name: 'NEW Ultra360 prolift治疗方案',
         services: [
           {
-            id: 'service-5',
+            id: 'service-6',
             name: 'prolift局部',
             prices: {
               single: [
@@ -206,55 +224,11 @@ export const priceData: MainCategory[] = [
               package: [
                 {
                   type: '疗程价格',
-                  price: '23800/10次'
-                }
-              ]
-            }
-          },
-          {
-            id: 'service-6',
-            name: 'prolift全面部',
-            prices: {
-              single: [
-                {
-                  type: '单次',
-                  price: 7980
-                }
-              ],
-              firstTime: [
-                {
-                  type: '首次体验',
-                  price: 4680
-                }
-              ],
-              package: [
+                  price: '48000/24次'
+                },
                 {
                   type: '疗程价格',
-                  price: '39800/10次'
-                }
-              ]
-            }
-          },
-          {
-            id: 'service-7',
-            name: 'prolift面眼颈',
-            prices: {
-              single: [
-                {
-                  type: '单次',
-                  price: 12800
-                }
-              ],
-              firstTime: [
-                {
-                  type: '首次体验',
-                  price: 6800
-                }
-              ],
-              package: [
-                {
-                  type: '疗程价格',
-                  price: '52800/10次'
+                  price: '86200/48次'
                 }
               ]
             }
@@ -262,11 +236,11 @@ export const priceData: MainCategory[] = [
         ]
       },
       {
-        id: 'sub-3',
+        id: 'sub-4',
         name: 'EMFACE',
         services: [
           {
-            id: 'service-emface',
+            id: 'service-7',
             name: 'EMFACE',
             prices: {
               single: [
@@ -275,7 +249,7 @@ export const priceData: MainCategory[] = [
                   price: 15800
                 },
                 {
-                  type: '单次',
+                  type: '单次', 
                   price: 31600
                 }
               ],
@@ -286,25 +260,25 @@ export const priceData: MainCategory[] = [
                 },
                 {
                   type: '首次体验',
-                  price: 6980
+                  price: 7980
                 }
               ],
               package: [
                 {
                   type: '疗程价格',
-                  price: '15600/单部位4次'
+                  price: '15600/单部位4个点'
                 },
                 {
                   type: '疗程价格',
-                  price: '29600/双部位4次'
+                  price: '29600/双部位8个点'
                 },
                 {
                   type: '疗程价格',
-                  price: '55000/不限部位16次'
+                  price: '38600/双部位12个点'
                 },
                 {
                   type: '疗程价格',
-                  price: '72000/不限部位24次'
+                  price: '72000/不限部位24个点'
                 }
               ]
             }
@@ -516,6 +490,30 @@ export const priceData: MainCategory[] = [
             }
           },
           {
+            id: 'service-14-1',
+            name: 'Aqua清净化管理',
+            prices: {
+              single: [
+                {
+                  type: '单次',
+                  price: 880
+                }
+              ],
+              firstTime: [
+                {
+                  type: '首次体验',
+                  price: 658
+                }
+              ],
+              package: [
+                {
+                  type: '疗程价格',
+                  price: '5680/10次'
+                }
+              ]
+            }
+          },
+          {
             id: 'service-15',
             name: '小分子灌注补水（搭配护理操作）',
             prices: {
@@ -700,8 +698,8 @@ export const priceData: MainCategory[] = [
     ]
   },
   {
-    id: 'series-5',
-    name: 'Deluxe-SWISS',
+    id: 'series-4',
+    name: 'Basic  Body',
     subCategories: [
       {
         id: 'sub-default-1',
@@ -904,8 +902,8 @@ export const priceData: MainCategory[] = [
     ]
   },
   {
-    id: 'series-6',
-    name: 'cellllight',
+    id: 'series-5',
+    name: 'Deluxe-SWISS',
     subCategories: [
       {
         id: 'sub-default-1',
@@ -1012,8 +1010,8 @@ export const priceData: MainCategory[] = [
     ]
   },
   {
-    id: 'series-7',
-    name: '精致美肌',
+    id: 'series-6',
+    name: 'cellllight',
     subCategories: [
       {
         id: 'sub-default-1',
@@ -1216,8 +1214,8 @@ export const priceData: MainCategory[] = [
     ]
   },
   {
-    id: 'series-8',
-    name: '私人订制',
+    id: 'series-7',
+    name: '精致美肌',
     subCategories: [
       {
         id: 'sub-default-1',
@@ -1321,6 +1319,138 @@ export const priceData: MainCategory[] = [
           },
           {
             id: 'service-46',
+            name: '少女背|美背管理',
+            prices: {
+              single: [
+                {
+                  type: '单次',
+                  price: 680
+                }
+              ],
+              firstTime: [
+                {
+                  type: '首次体验',
+                  price: 498
+                }
+              ],
+              package: [
+                {
+                  type: '疗程价格',
+                  price: '4280/10次'
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'series-8',
+    name: '私人订制',
+    subCategories: [
+      {
+        id: 'sub-default-1',
+        name: '私人订制',
+        services: [
+          {
+            id: 'service-47',
+            name: '全效赋活眼部排毒管理',
+            prices: {
+              single: [
+                {
+                  type: '单次',
+                  price: 580
+                }
+              ],
+              firstTime: [
+                {
+                  type: '首次体验',
+                  price: 428
+                }
+              ],
+              package: [
+                {
+                  type: '疗程价格',
+                  price: '3980/10次'
+                }
+              ]
+            }
+          },
+          {
+            id: 'service-48',
+            name: '多肽眼部胶原管理',
+            prices: {
+              single: [
+                {
+                  type: '单次',
+                  price: 980
+                }
+              ],
+              firstTime: [
+                {
+                  type: '首次体验',
+                  price: 758
+                }
+              ],
+              package: [
+                {
+                  type: '疗程价格',
+                  price: '6980/10次'
+                }
+              ]
+            }
+          },
+          {
+            id: 'service-49',
+            name: '漫画手|美手管理',
+            prices: {
+              single: [
+                {
+                  type: '单次',
+                  price: 580
+                }
+              ],
+              firstTime: [
+                {
+                  type: '首次体验',
+                  price: 428
+                }
+              ],
+              package: [
+                {
+                  type: '疗程价格',
+                  price: '3980/10次'
+                }
+              ]
+            }
+          },
+          {
+            id: 'service-50',
+            name: '千金手|美手管理',
+            prices: {
+              single: [
+                {
+                  type: '单次',
+                  price: 980
+                }
+              ],
+              firstTime: [
+                {
+                  type: '首次体验',
+                  price: 758
+                }
+              ],
+              package: [
+                {
+                  type: '疗程价格',
+                  price: '6980/10次'
+                }
+              ]
+            }
+          },
+          {
+            id: 'service-51',
             name: '少女背|美背管理',
             prices: {
               single: [
