@@ -148,9 +148,9 @@ export const priceData: MainCategory[] = [
                 { type: '首次体验', price: 7980 }
               ],
               package: [
-                { type: '疗程价格', price: '15600/单部位4个点' },
-                { type: '疗程价格', price: '29600/双部位8个点' },
-                { type: '疗程价格', price: '38600/双部位12个点' },
+                { type: '疗程价格', price: '15800/单部位4个点' },
+                { type: '疗程价格', price: '29800/双部位8个点' },
+                { type: '疗程价格', price: '38800/双部位12个点' },
                 { type: '疗程价格', price: '72000/不限部位24个点' }
               ]
             }
@@ -618,4 +618,4 @@ export const priceData: MainCategory[] = [
       }
     ]
   }
-]
+];
