@@ -224,8 +224,8 @@ export const priceData: MainCategory[] = [
             id: 'service-11',
             name: 'Aqua深层毛孔净化管理',
             prices: {
-              single: [{ type: '单次', price: 680 }],
-              firstTime: [{ type: '首次体验', price: 518 }],
+              single: [{ type: '单次', price: 880 }],
+              firstTime: [{ type: '首次体验', price: 680 }],
               package: [{ type: '疗程价格', price: '4580/10次' }]
             }
           },
@@ -437,8 +437,8 @@ export const priceData: MainCategory[] = [
             id: 'service-30',
             name: 'celllight-单模式',
             prices: {
-              single: [{ type: '单次', price: 1580 }],
-              firstTime: [{ type: '首次体验', price: 1280 }],
+              single: [{ type: '单次', price: 1880 }],
+              firstTime: [{ type: '首次体验', price: 1580 }],
               package: [{ type: '疗程价格', price: '6800/6次' }]
             }
           },
@@ -455,8 +455,8 @@ export const priceData: MainCategory[] = [
             id: 'service-32',
             name: 'celllight牛奶白白',
             prices: {
-              single: [{ type: '单次', price: 1580 }],
-              firstTime: [{ type: '首次体验', price: 1280 }],
+              single: [{ type: '单次', price: 1780 }],
+              firstTime: [{ type: '首次体验', price: 1480 }],
               package: [{ type: '疗程价格', price: '9800/10次' }]
             }
           },
@@ -574,7 +574,7 @@ export const priceData: MainCategory[] = [
             name: '全效赋活眼部排毒管理',
             prices: {
               single: [{ type: '单次', price: 580 }],
-              firstTime: [{ type: '首次体验', price: 428 }],
+              firstTime: [{ type: '首次体验', price: 498 }],
               package: [{ type: '疗程价格', price: '3980/10次' }]
             }
           },
@@ -592,7 +592,7 @@ export const priceData: MainCategory[] = [
             name: '漫画手|美手管理',
             prices: {
               single: [{ type: '单次', price: 580 }],
-              firstTime: [{ type: '首次体验', price: 428 }],
+              firstTime: [{ type: '首次体验', price: 480 }],
               package: [{ type: '疗程价格', price: '3980/10次' }]
             }
           },
@@ -610,7 +610,7 @@ export const priceData: MainCategory[] = [
             name: '少女背|美背管理',
             prices: {
               single: [{ type: '单次', price: 680 }],
-              firstTime: [{ type: '首次体验', price: 498 }],
+              firstTime: [{ type: '首次体验', price: 580 }],
               package: [{ type: '疗程价格', price: '4280/10次' }]
             }
           }
