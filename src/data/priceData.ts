@@ -20,12 +20,16 @@ export interface ServiceItem extends Service {}
 export interface SubCategory {
   id: string;
   name: string;
+  slogan?: string;
+  assetKey?: string;
   services: Service[];
 }
 
 export interface MainCategory {
   id: string;
   name: string;
+  slogan?: string;
+  assetKey?: string;
   subCategories: SubCategory[];
 }
 
@@ -39,6 +43,8 @@ export const priceData: MainCategory[] = [
       {
         id: 'sub-1',
         name: 'EMFUSION',
+        slogan: '整体激活皮肤组织，全面强化肌肤功能',
+        assetKey: 'lumen/btl/emfusion',
         services: [
           {
             id: 'service-1',
@@ -70,6 +76,8 @@ export const priceData: MainCategory[] = [
       {
         id: 'sub-2',
         name: 'NEW Ultra360',
+        slogan: '强化韧带组织，实现全新提升效果',
+        assetKey: 'lumen/btl/ultra360',
         services: [
           {
             id: 'service-3',
@@ -134,6 +142,8 @@ export const priceData: MainCategory[] = [
       {
         id: 'sub-4',
         name: 'EMFACE',
+        slogan: '重塑抗衰肌群，紧致面部轮廓，面部整体年轻',
+        assetKey: 'lumen/btl/emface',
         services: [
           {
             id: 'service-7',
@@ -165,6 +175,8 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-2',
     name: 'INDIBA',
+    slogan: '448kHz内生热，抗炎修护细胞·紧致塑形',
+    assetKey: 'lumen/indiba',
     subCategories: [
       {
         id: 'sub-1',
@@ -216,6 +228,7 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-3',
     name: 'Basic FACIAL',
+    slogan: '温和清洁补水·稳护健康肤质',
     subCategories: [
       {
         id: 'sub-1',
@@ -275,6 +288,7 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-4',
     name: 'Basic Body',
+    slogan: '舒缓塑形养护·焕新肌理质感',
     subCategories: [
       {
         id: 'sub-1',
@@ -343,6 +357,7 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-5',
     name: 'Deluxe-SWISS',
+    slogan: '奢享抗衰修护·焕活年轻肌感',
     subCategories: [
       {
         id: 'sub-1',
@@ -429,6 +444,7 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-6',
     name: 'celllight',
+    slogan: '匀净提亮肤色·焕活健康肤态',
     subCategories: [
       {
         id: 'sub-1',
@@ -479,6 +495,7 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-7',
     name: '精致美肌',
+    slogan: '温和无痛脱毛·持久光滑嫩肤',
     subCategories: [
       {
         id: 'sub-1',
@@ -565,6 +582,7 @@ export const priceData: MainCategory[] = [
   {
     id: 'series-8',
     name: '私人订制',
+    slogan: '眼手奢护抗衰，定格弹润年轻状态',
     subCategories: [
       {
         id: 'sub-1',

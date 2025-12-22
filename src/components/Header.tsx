@@ -1,9 +1,10 @@
 import './Header.css'
 
 interface HeaderProps {
-  view: 'main' | 'subcategory' | 'service'
+  view: 'home' | 'main' | 'subcategory' | 'service'
   mainCategory?: string
   service?: string
+  activeStore?: 'lumen' | 'nymph'
   onBack: () => void
 }
 
@@ -11,6 +12,7 @@ export default function Header({
   view,
   mainCategory,
   service,
+  activeStore = 'lumen',
   onBack
 }: HeaderProps) {
   const getBreadcrumb = () => {
@@ -26,6 +28,19 @@ export default function Header({
 
     return breadcrumbs
   }
+
+  const storeInfo = {
+    lumen: {
+      title: 'Lumen Beauty',
+      subtitle: '以光为笔，雕刻时光中的永恒肌韵'
+    },
+    nymph: {
+      title: 'Nymph 宁芙',
+      subtitle: '让美成为可持续的生命力'
+    }
+  }
+
+  const currentStore = storeInfo[activeStore]
 
   return (
     <header className='header'>
@@ -49,8 +64,8 @@ export default function Header({
       <div className='header-content'>
         {view === 'main' ? (
           <div className='main-title'>
-            <h1>LumenBeauty</h1>
-            <p className='subtitle'>以光为笔，雕刻时光中的永恒肌韵</p>
+            <h1>{currentStore.title}</h1>
+            <p className='subtitle'>{currentStore.subtitle}</p>
           </div>
         ) : (
           getBreadcrumb().length > 0 && (
