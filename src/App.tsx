@@ -50,10 +50,6 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [navigation.view])
 
-  const navigateToHome = () => {
-    smoothTransition({ view: 'home' })
-  }
-
   const navigateToMain = () => {
     smoothTransition({ view: 'main' })
   }

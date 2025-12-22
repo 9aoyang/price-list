@@ -1,5 +1,4 @@
 import type { MainCategory } from '../data/priceData'
-import { getAssetUrl } from '../utils/assets'
 import './MainMenu.css'
 
 interface MainMenuProps {

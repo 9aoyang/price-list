@@ -1,6 +1,14 @@
 // Load assets globally
-const lumenAssets = import.meta.glob('../assets/lumen/**/*.{png,jpg,jpeg}', { eager: true, as: 'url' })
-const nymphAssets = import.meta.glob('../assets/nymph/**/*.{png,jpg,jpeg}', { eager: true, as: 'url' })
+const lumenAssets = import.meta.glob('../assets/lumen/**/*.{png,jpg,jpeg}', { 
+  eager: true, 
+  query: '?url',
+  import: 'default'
+})
+const nymphAssets = import.meta.glob('../assets/nymph/**/*.{png,jpg,jpeg}', { 
+  eager: true, 
+  query: '?url',
+  import: 'default'
+})
 
 export function getAssetUrl(key?: string) {
   if (!key) return undefined

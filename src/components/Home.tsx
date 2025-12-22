@@ -1,28 +1,30 @@
 import React, { useState, useRef, useMemo, useEffect, useCallback } from 'react'
 import { createPortal } from 'react-dom'
 import './Home.css'
-import founderPortrait from '../assets/home/founder_portrait.jpg'
 import brandIntro1 from '../assets/home/brand_intro_1.jpg'
-import brandIntro2 from '../assets/home/brand_intro_2.jpg'
 import brandIntro3 from '../assets/home/brand_intro_3.jpg'
 
 // Load environment images - Original and Thumbnails
 const lumenFull = import.meta.glob('../assets/environment/lumen/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
   eager: true,
-  as: 'url'
+  query: '?url',
+  import: 'default'
 })
 const lumenThumbs = import.meta.glob('../assets/environment/lumen/thumbnails/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
   eager: true,
-  as: 'url'
+  query: '?url',
+  import: 'default'
 })
 
 const nymphFull = import.meta.glob('../assets/environment/nymph/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
   eager: true,
-  as: 'url'
+  query: '?url',
+  import: 'default'
 })
 const nymphThumbs = import.meta.glob('../assets/environment/nymph/thumbnails/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
   eager: true,
-  as: 'url'
+  query: '?url',
+  import: 'default'
 })
 
 interface HomeProps {
