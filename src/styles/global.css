@@ -31,7 +31,31 @@ body {
   width: 100%;
   position: relative;
   overflow-x: hidden;
-  background: var(--bg-color);
+  background: transparent; /* Changed from var(--bg-color) to show global bg */
+}
+
+.app-global-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.8s ease-in-out;
+}
+
+.app-global-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85); /* Strong overlay to keep content readable but hint at bg */
+  backdrop-filter: blur(20px); /* Strong blur */
+  -webkit-backdrop-filter: blur(20px);
 }
 
 /* Page Transitions */

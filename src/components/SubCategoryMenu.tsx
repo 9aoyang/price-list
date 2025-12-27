@@ -1,21 +1,43 @@
-import type { MainCategory, ServiceItem } from '../data/priceData'
+import { useNavigate, useParams } from 'react-router-dom'
+import { getCategory, getStoreName, getPriceDisplay } from '../utils/dataHelpers'
 import { getAssetUrl } from '../utils/assets'
+import Header from './Header'
 import './SubCategoryMenu.css'
 
-interface SubCategoryMenuProps {
-  mainCategory: MainCategory
-  onServiceSelect: (service: ServiceItem) => void
-}
+export default function SubCategoryMenu() {
+  const navigate = useNavigate()
+  const { store, categoryId } = useParams<{ store: string, categoryId: string }>()
+  
+  const mainCategory = getCategory(store, categoryId)
+  const storeName = getStoreName(store)
 
-export default function SubCategoryMenu({ mainCategory, onServiceSelect }: SubCategoryMenuProps) {
+  if (!mainCategory) {
+    return <div className="error-container">Category not found</div>
+  }
+
+  const handleServiceSelect = (serviceName: string) => {
+    // Encode service name for URL safety
+    navigate(`/menu/${store}/category/${categoryId}/service/${encodeURIComponent(serviceName)}`)
+  }
+
   return (
     <div className='subcategory-menu'>
-      <div className='subcategory-grid'>
-        {mainCategory.subCategories.map((subCategory) => {
+      <Header 
+        variant="default" 
+        title={mainCategory.name} 
+        subtitle={storeName} 
+      />
+      
+      <div className='subcategory-list'>
+        {mainCategory.subCategories?.map((subCategory, index) => {
           const bgImage = getAssetUrl(subCategory.assetKey)
           
           return (
-            <div key={subCategory.id} className='subcategory-section'>
+            <div 
+              key={subCategory.name} 
+              className='subcategory-section'
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <div 
                 className={`subcategory-header ${bgImage ? 'has-image' : ''}`}
                 style={{ 
@@ -28,23 +50,18 @@ export default function SubCategoryMenu({ mainCategory, onServiceSelect }: SubCa
                 {subCategory.slogan && <p className="subcategory-slogan">{subCategory.slogan}</p>}
               </div>
 
-              <div className='services-grid'>
-                {subCategory.services.map((service) => (
+              <div className='service-grid'>
+                {subCategory.services?.map((item) => (
                   <div
-                    key={service.id}
+                    key={item.name}
                     className='service-card'
-                    onClick={() => onServiceSelect(service)}
+                    onClick={() => handleServiceSelect(item.name)}
                   >
-                    <h4>{service.name}</h4>
-                    {service.description && (
-                      <p className='service-description'>
-                        {service.description}
-                      </p>
-                    )}
-                    <div className='price-preview'>
-                      {service.prices.single && service.prices.single[0] && (
-                        <span>{service.prices.single[0].price}元起</span>
-                      )}
+                    <div className='service-info'>
+                      <h4>{item.name}</h4>
+                      <div className='service-meta'>
+                        <span className='price'>¥{getPriceDisplay(item)}</span>
+                      </div>
                     </div>
                   </div>
                 ))}

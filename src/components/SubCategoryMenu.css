@@ -5,7 +5,7 @@
   animation: slideInRight 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.subcategory-grid {
+.subcategory-list {
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -30,20 +30,28 @@
   border-bottom: none;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .subcategory-title {
   font-size: 1.8em;
   color: #4A4A4A;
-  margin-bottom: 10px;
-  font-weight: 400;
+  margin-bottom: 0;
+  font-weight: 300;
   letter-spacing: 0.5px;
+  border-left: 3px solid #C5A988;
+  padding-left: 15px;
 }
 
 .subcategory-header.has-image .subcategory-title {
   color: white;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   font-size: 2.2em;
+  border-left: none; /* Remove border on image background */
+  padding-left: 0;
+  text-align: center;
 }
 
 .subcategory-slogan {
@@ -51,14 +59,16 @@
   color: #666;
   font-style: italic;
   font-weight: 300;
+  margin-top: 10px;
 }
 
 .subcategory-header.has-image .subcategory-slogan {
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  text-align: center;
 }
 
-.services-grid {
+.service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 24px;
@@ -76,8 +86,8 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 140px;
+  justify-content: center;
+  min-height: 120px;
 }
 
 .service-card:hover {
@@ -88,32 +98,24 @@
   border-color: rgba(139, 124, 108, 0.3);
 }
 
-.service-card h4 {
+.service-info h4 {
   margin: 0 0 12px 0;
-  font-size: 1.2em;
+  font-size: 1.25em;
   color: #2C2C2C;
   font-weight: 500;
   line-height: 1.4;
 }
 
-.service-description {
-  font-size: 0.9em;
-  color: #8B7C6C;
-  margin-bottom: 16px;
-  line-height: 1.5;
-  flex-grow: 1;
-}
-
-.price-preview {
-  margin-top: auto;
-  padding-top: 16px;
-  border-top: 1px dashed rgba(139, 124, 108, 0.2);
+.service-meta {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(139, 124, 108, 0.2);
 }
 
-.price-preview span {
+.service-meta .price {
   font-size: 1.1em;
   color: #B59B78;
   font-weight: 600;
@@ -149,14 +151,17 @@
   .subcategory-title {
     font-size: 1.5em;
   }
+  
+  .subcategory-header.has-image .subcategory-title {
+    font-size: 1.8em;
+  }
 
-  .services-grid {
+  .service-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
   .service-card {
     padding: 20px;
-    min-height: auto;
   }
 }

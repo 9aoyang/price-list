@@ -1,78 +1,49 @@
+import { useNavigate, useLocation, useParams } from 'react-router-dom'
 import './Header.css'
 
 interface HeaderProps {
-  view: 'home' | 'main' | 'subcategory' | 'service'
-  mainCategory?: string
-  service?: string
-  activeStore?: 'lumen' | 'nymph'
-  onBack: () => void
+  variant?: 'overlay' | 'default'
+  title?: string
+  subtitle?: string
 }
 
-export default function Header({
-  view,
-  mainCategory,
-  service,
-  activeStore = 'lumen',
-  onBack
-}: HeaderProps) {
-  const getBreadcrumb = () => {
-    const breadcrumbs: string[] = []
-
-    if (mainCategory) {
-      breadcrumbs.push(mainCategory)
-    }
-
-    if (service) {
-      breadcrumbs.push(service)
-    }
-
-    return breadcrumbs
+export default function Header({ variant = 'default', title, subtitle }: HeaderProps) {
+  const navigate = useNavigate()
+  const location = useLocation()
+  
+  const isHome = location.pathname === '/'
+  
+  // Custom back logic
+  const handleBack = () => {
+    // If specific logic is needed per page, we can inspect location
+    navigate(-1)
   }
 
-  const storeInfo = {
-    lumen: {
-      title: 'Lumen Beauty',
-      subtitle: '以光为笔，雕刻时光中的永恒肌韵'
-    },
-    nymph: {
-      title: 'Nymph 宁芙',
-      subtitle: '让美成为可持续的生命力'
-    }
-  }
-
-  const currentStore = storeInfo[activeStore]
+  if (isHome) return null
 
   return (
-    <header className='header'>
-      {view !== 'main' && (
-        <div
-          className='back-button'
-          onClick={onBack}
-          role='button'
-          tabIndex={0}
-          aria-label='返回上一级'
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault()
-              onBack()
-            }
-          }}
-        >
-          ←
-        </div>
-      )}
-      <div className='header-content'>
-        {view === 'main' ? (
-          <div className='main-title'>
-            <h1>{currentStore.title}</h1>
-            <p className='subtitle'>{currentStore.subtitle}</p>
+    <>
+      {/* 统一的返回按钮，绝对定位或固定定位 */}
+      <button 
+        className={`unified-back-btn ${variant}`}
+        onClick={handleBack}
+        aria-label="Go Back"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
+
+      {/* 仅在非 overlay 模式下显示的标题栏 (Breadcrumbs 或 页面标题) */}
+      {variant === 'default' && (title || subtitle) && (
+        <header className='standard-header'>
+          <div className='header-content'>
+            {title && <h1>{title}</h1>}
+            {subtitle && <p>{subtitle}</p>}
           </div>
-        ) : (
-          getBreadcrumb().length > 0 && (
-            <div className='breadcrumb'>{getBreadcrumb().join(' / ')}</div>
-          )
-        )}
-      </div>
-    </header>
+        </header>
+      )}
+    </>
   )
 }

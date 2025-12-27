@@ -1,5 +1,6 @@
 import React, { useState, useRef, useMemo, useEffect, useCallback } from 'react'
 import { createPortal } from 'react-dom'
+import { useNavigate } from 'react-router-dom'
 import './Home.css'
 import brandIntro1 from '../assets/home/brand_intro_1.jpg'
 import brandIntro3 from '../assets/home/brand_intro_3.jpg'
@@ -27,22 +28,21 @@ const nymphThumbs = import.meta.glob('../assets/environment/nymph/thumbnails/*.{
   import: 'default'
 })
 
-interface HomeProps {
-  onExploreClick: () => void
-}
-
 interface ImageSet {
   full: string
   thumb: string
   name: string
 }
 
-const Home: React.FC<HomeProps> = ({ onExploreClick }) => {
+const Home: React.FC = () => {
+  const navigate = useNavigate()
   const environmentRef = useRef<HTMLDivElement>(null)
   const [activeTab, setActiveTab] = useState<'lumen' | 'nymph'>('lumen')
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
-  // Memoize image matching logic
+  const handleExplore = () => {
+    navigate('/menu/lumen')
+  }
   const currentImageSets = useMemo(() => {
     const fulls = activeTab === 'lumen' ? lumenFull : nymphFull
     const thumbs = activeTab === 'lumen' ? lumenThumbs : nymphThumbs
@@ -119,7 +119,7 @@ const Home: React.FC<HomeProps> = ({ onExploreClick }) => {
           <h2>Lumen Beauty</h2>
           <p className="slogan">以光为笔，雕刻时光中的永恒肌韵</p>
           <div className="hero-actions">
-            <button className="explore-btn" onClick={onExploreClick}>
+            <button className="explore-btn" onClick={handleExplore}>
               探索服务
             </button>
             <button className="explore-btn secondary" onClick={scrollToEnvironment}>
@@ -221,7 +221,7 @@ const Home: React.FC<HomeProps> = ({ onExploreClick }) => {
       </section>
 
       <div className="footer-cta">
-        <button className="explore-btn" onClick={onExploreClick}>
+        <button className="explore-btn" onClick={handleExplore}>
           预约体验
         </button>
       </div>
