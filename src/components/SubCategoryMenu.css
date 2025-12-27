@@ -15,43 +15,28 @@
   background: transparent;
 }
 
-/* Header Styles */
+/* Header Styles Base */
 .subcategory-header {
   margin-bottom: 30px;
   padding: 20px 0;
   border-bottom: 1px solid rgba(139, 124, 108, 0.2);
   transition: all 0.3s ease;
   border-radius: 12px;
-}
-
-.subcategory-header.has-image {
-  padding: 60px 40px;
-  color: white;
-  border-bottom: none;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .subcategory-title {
   font-size: 1.8em;
   color: #4A4A4A;
+  margin-top: 0;
   margin-bottom: 0;
   font-weight: 300;
   letter-spacing: 0.5px;
   border-left: 3px solid #C5A988;
   padding-left: 15px;
-}
-
-.subcategory-header.has-image .subcategory-title {
-  color: white;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  font-size: 2.2em;
-  border-left: none; /* Remove border on image background */
-  padding-left: 0;
-  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .subcategory-slogan {
@@ -60,14 +45,61 @@
   font-style: italic;
   font-weight: 300;
   margin-top: 10px;
+  position: relative;
+  z-index: 2;
 }
 
-.subcategory-header.has-image .subcategory-slogan {
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+/* === Mode: Contain (图片显示在右侧，不裁切) === */
+.subcategory-header.has-image.mode-contain {
+  padding: 60px 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-color: #fcfaf8;
+  border-bottom: none;
+  box-shadow: 0 4px 15px rgba(139, 124, 108, 0.1);
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.subcategory-header.has-image.mode-contain .subcategory-title,
+.subcategory-header.has-image.mode-contain .subcategory-slogan {
+  max-width: 60%; /* 避免遮挡右侧图片 */
+}
+
+/* === Mode: Cover (图片全覆盖，作为背景) === */
+.subcategory-header.has-image.mode-cover {
+  padding: 60px 40px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subcategory-header.has-image.mode-cover .subcategory-title {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  font-size: 2.2em;
+  border-left: none;
+  padding-left: 0;
   text-align: center;
 }
 
+.subcategory-header.has-image.mode-cover .subcategory-slogan {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Service Grid Styles */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -144,16 +176,34 @@
     margin-bottom: 20px;
   }
   
-  .subcategory-header.has-image {
+  /* Mobile: Contain Mode */
+  .subcategory-header.has-image.mode-contain {
+    padding: 30px 20px;
+    background-position: bottom 10px right 10px;
+    background-size: 40%;
+    min-height: 140px;
+  }
+  
+  .subcategory-header.has-image.mode-contain .subcategory-title {
+    font-size: 1.6em;
+    max-width: 100%; /* Mobile allows text to take width, image is small at bottom-right */
+  }
+
+  .subcategory-header.has-image.mode-contain .subcategory-slogan {
+    max-width: 100%;
+  }
+
+  /* Mobile: Cover Mode */
+  .subcategory-header.has-image.mode-cover {
     padding: 40px 20px;
+  }
+
+  .subcategory-header.has-image.mode-cover .subcategory-title {
+    font-size: 1.8em;
   }
 
   .subcategory-title {
     font-size: 1.5em;
-  }
-  
-  .subcategory-header.has-image .subcategory-title {
-    font-size: 1.8em;
   }
 
   .service-grid {

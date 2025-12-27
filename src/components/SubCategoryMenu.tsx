@@ -30,6 +30,7 @@ export default function SubCategoryMenu() {
       <div className='subcategory-list'>
         {mainCategory.subCategories?.map((subCategory, index) => {
           const bgImage = getAssetUrl(subCategory.assetKey)
+          const mode = subCategory.displayMode || 'cover'
           
           return (
             <div 
@@ -38,11 +39,13 @@ export default function SubCategoryMenu() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div 
-                className={`subcategory-header ${bgImage ? 'has-image' : ''}`}
+                className={`subcategory-header ${bgImage ? 'has-image' : ''} mode-${mode}`}
                 style={{ 
-                  backgroundImage: bgImage ? `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(${bgImage})` : undefined,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
+                  backgroundImage: bgImage ? 
+                    (mode === 'cover' 
+                      ? `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(${bgImage})` 
+                      : `url(${bgImage})`)
+                    : undefined,
                 }}
               >
                 <h3 className='subcategory-title'>{subCategory.name}</h3>

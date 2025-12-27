@@ -22,6 +22,7 @@ export interface SubCategory {
   name: string;
   slogan?: string;
   assetKey?: string;
+  displayMode?: 'cover' | 'contain';
   services: Service[];
 }
 
@@ -182,6 +183,7 @@ export const priceData: MainCategory[] = [
         id: 'sub-1',
         name: 'INDIBA身体养护系列',
         assetKey: 'lumen/indiba',
+        displayMode: 'contain',
         services: [
           {
             id: 'service-8',
@@ -202,6 +204,7 @@ export const priceData: MainCategory[] = [
         id: 'sub-2',
         name: 'INDIBA调理',
         assetKey: 'lumen/indiba',
+        displayMode: 'contain',
         services: [
           {
             id: 'service-9',

@@ -181,11 +181,12 @@ export const nymphPriceData: MainCategory[] = [
     id: 'n-series-6',
     name: 'Deluxe-SWISS',
     slogan: '奢享抗衰修护·焕活年轻肌感',
-    assetKey: 'nymph/deluxe_swiss',
     subCategories: [
       {
         id: 'n-sub-6-1',
         name: 'Deluxe-SWISS',
+        assetKey: 'nymph/deluxe_swiss/wishpro',
+        displayMode: 'contain',
         services: [
           {
             id: 'n-service-6-1',
