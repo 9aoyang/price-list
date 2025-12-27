@@ -1,50 +1,41 @@
 /* Unified Back Button */
 .unified-back-btn {
   position: fixed;
-  top: 20px;
+  top: 30px;
   left: 20px;
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+  background: transparent;
   border: none;
   cursor: pointer;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   -webkit-tap-highlight-color: transparent;
+  padding: 0;
+  color: #1a1a1a; /* Unified to black */
 }
 
-/* Default Variant (Dark on Light) */
+.unified-back-btn:hover {
+  transform: translateX(-4px); /* Slight nudge left on hover */
+}
+
+/* Variants - keeping classes for potential layout adjustments but unifying colors */
 .unified-back-btn.default {
-  background: rgba(255, 255, 255, 0.8);
-  color: #555;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  /* Inherits black color */
 }
 
-.unified-back-btn.default:hover {
-  background: #fff;
-  color: #1a1a1a;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transform: translateY(-2px);
-}
-
-/* Overlay Variant (Light on Dark/Image) */
 .unified-back-btn.overlay {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* Inherits black color */
 }
 
-.unified-back-btn.overlay:hover {
-  background: rgba(255, 255, 255, 0.35);
-  transform: scale(1.05);
-  border-color: rgba(255, 255, 255, 0.5);
+/* SVG Styling */
+.unified-back-btn svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 2px;
 }
 
 /* Standard Header Container (for Titles) */
@@ -59,13 +50,15 @@
   font-size: 1.8rem;
   color: #1a1a1a;
   margin: 0 0 5px 0;
-  font-weight: 400;
+  font-weight: 300;
+  letter-spacing: -0.5px;
 }
 
 .standard-header p {
   color: #888;
   font-size: 0.95rem;
   margin: 0;
+  font-weight: 300;
 }
 
 @keyframes slideInDown {
@@ -76,9 +69,7 @@
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   .unified-back-btn {
-    top: 16px;
+    top: 20px;
     left: 16px;
-    width: 44px;
-    height: 44px;
   }
 }

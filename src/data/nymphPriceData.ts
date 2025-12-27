@@ -78,11 +78,6 @@ export const nymphPriceData: MainCategory[] = [
         name: 'Basic Body',
         services: [
           {
-            id: 'n-service-1-1',
-            name: '牛奶精油泡浴',
-            prices: { single: [{ type: '单次', price: 328 }], firstTime: [{ type: '首次体验', price: 268 }], package: [{ type: '疗程价格', price: '2280/10次' }] }
-          },
-          {
             id: 'n-service-1-2',
             name: '精油SPA45mins',
             prices: { single: [{ type: '单次', price: 458 }], firstTime: [{ type: '首次体验', price: 388 }], package: [{ type: '疗程价格', price: '3280/10次' }] }
@@ -95,7 +90,7 @@ export const nymphPriceData: MainCategory[] = [
           {
             id: 'n-service-1-4',
             name: '韩式多功能黑科技身体30mins',
-            prices: { single: [{ type: '单次', price: 680 }], firstTime: [{ type: '首次体验', price: 528 }], package: [{ type: '疗程价格', price: '4280/10次' }] }
+            prices: { single: [{ type: '单次', price: 680 }], firstTime: [{ type: '首次体验', price: 528 }], package: [{ type: '疗程价格', price: '2280/10次' }] }
           },
           {
             id: 'n-service-1-5',
@@ -170,7 +165,7 @@ export const nymphPriceData: MainCategory[] = [
           {
             id: 'n-service-3-6',
             name: '水光焕能精华护理',
-            prices: { single: [{ type: '单次', price: 880 }], firstTime: [{ type: '首次体验', price: 598 }], package: [{ type: '疗程价格', price: '5680/10次' }] }
+            prices: { single: [{ type: '单次', price: 880 }], firstTime: [{ type: '首次体验', price: 680 }], package: [{ type: '疗程价格', price: '5680/10次' }] }
           },
           {
             id: 'n-service-3-7',

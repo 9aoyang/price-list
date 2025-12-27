@@ -181,6 +181,7 @@ export const priceData: MainCategory[] = [
       {
         id: 'sub-1',
         name: 'INDIBA身体养护系列',
+        assetKey: 'lumen/indiba',
         services: [
           {
             id: 'service-8',
@@ -200,6 +201,7 @@ export const priceData: MainCategory[] = [
       {
         id: 'sub-2',
         name: 'INDIBA调理',
+        assetKey: 'lumen/indiba',
         services: [
           {
             id: 'service-9',
@@ -362,6 +364,7 @@ export const priceData: MainCategory[] = [
       {
         id: 'sub-1',
         name: 'Deluxe-SWISS',
+        assetKey: 'lumen/deluxe_swiss/wishpro',
         services: [
           {
             id: 'service-22',

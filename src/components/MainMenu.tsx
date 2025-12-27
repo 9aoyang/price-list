@@ -1,6 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { getStoreData } from '../utils/dataHelpers'
-import Header from './Header'
 import './MainMenu.css'
 
 // Import brand environment images
@@ -38,8 +37,6 @@ export default function MainMenu() {
 
   return (
     <div className='main-menu'>
-      <Header variant="overlay" />
-
       <div 
         className='brand-hero-large'
         style={{

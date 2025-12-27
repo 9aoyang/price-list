@@ -5,12 +5,16 @@ import MainMenu from './components/MainMenu'
 import SubCategoryMenu from './components/SubCategoryMenu'
 import ServiceDetail from './components/ServiceDetail'
 import GlobalBackground from './components/GlobalBackground'
+import ScrollToTop from './components/ScrollToTop'
+import GlobalBackButton from './components/GlobalBackButton'
 
 function App() {
   return (
     <BrowserRouter basename="/price-list">
       <div className='app'>
+        <ScrollToTop />
         <GlobalBackground />
+        <GlobalBackButton />
         <Routes>
           {/* Home Page */}
           <Route path="/" element={<Home />} />

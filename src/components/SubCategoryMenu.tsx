@@ -23,7 +23,6 @@ export default function SubCategoryMenu() {
   return (
     <div className='subcategory-menu'>
       <Header 
-        variant="default" 
         title={mainCategory.name} 
         subtitle={storeName} 
       />

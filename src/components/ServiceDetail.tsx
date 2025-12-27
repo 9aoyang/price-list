@@ -18,7 +18,6 @@ export default function ServiceDetail() {
   return (
     <div className='service-detail-wrapper'>
       <Header 
-        variant="default" 
         title={service.name} 
         subtitle={`${storeName} / ${category.name}`} 
       />

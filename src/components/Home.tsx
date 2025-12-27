@@ -46,12 +46,13 @@ const Home: React.FC = () => {
   const currentImageSets = useMemo(() => {
     const fulls = activeTab === 'lumen' ? lumenFull : nymphFull
     const thumbs = activeTab === 'lumen' ? lumenThumbs : nymphThumbs
+    const excludedFiles = ['DSCF3047.JPG', 'IMG_2933.jpeg']
     
     const sets: ImageSet[] = []
     
     Object.entries(fulls).forEach(([path, fullUrl]) => {
       const filename = path.split('/').pop()
-      if (!filename) return
+      if (!filename || excludedFiles.includes(filename)) return
 
       // Find matching thumbnail
       const thumbKey = Object.keys(thumbs).find(key => key.endsWith(`/${filename}`))
