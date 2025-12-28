@@ -252,6 +252,7 @@ export const nymphPriceData: MainCategory[] = [
         name: 'EMFUSION',
         slogan: '整体激活皮肤组织，全面强化肌肤功能',
         assetKey: 'nymph/btl/emfusion',
+        displayMode: 'contain',
         services: [
            {
             id: 'n-service-4-1',
@@ -285,6 +286,7 @@ export const nymphPriceData: MainCategory[] = [
         name: 'NEW Ultra360',
         slogan: '强化韧带组织，实现全新提升效果',
         assetKey: 'nymph/btl/ultra360',
+        displayMode: 'contain',
         services: [
           {
             id: 'n-service-4-3',
@@ -351,6 +353,7 @@ export const nymphPriceData: MainCategory[] = [
         name: 'EMFACE',
         slogan: '重塑抗衰肌群，紧致面部轮廓，面部整体年轻',
         assetKey: 'nymph/btl/emface',
+        displayMode: 'contain',
         services: [
            {
             id: 'n-service-4-7',
