@@ -368,6 +368,7 @@ export const priceData: MainCategory[] = [
         id: 'sub-1',
         name: 'Deluxe-SWISS',
         assetKey: 'lumen/deluxe_swiss/wishpro',
+        displayMode: 'contain',
         services: [
           {
             id: 'service-22',
