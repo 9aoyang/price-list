@@ -38,18 +38,17 @@ export default function SubCategoryMenu() {
               className='subcategory-section'
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div 
-                className={`subcategory-header ${bgImage ? 'has-image' : ''} mode-${mode}`}
-                style={{ 
-                  backgroundImage: bgImage ? 
-                    (mode === 'cover' 
-                      ? `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(${bgImage})` 
-                      : `url(${bgImage})`)
-                    : undefined,
-                }}
-              >
-                <h3 className='subcategory-title'>{subCategory.name}</h3>
-                {subCategory.slogan && <p className="subcategory-slogan">{subCategory.slogan}</p>}
+              <div className="subcategory-header-card">
+                {bgImage && (
+                  <div 
+                    className={`subcategory-image mode-${mode}`}
+                    style={{ backgroundImage: `url(${bgImage})` }}
+                  />
+                )}
+                <div className="subcategory-info">
+                  <h3 className='subcategory-title'>{subCategory.name}</h3>
+                  {subCategory.slogan && <p className="subcategory-slogan">{subCategory.slogan}</p>}
+                </div>
               </div>
 
               <div className='service-grid'>
