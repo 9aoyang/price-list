@@ -6,23 +6,23 @@ import brandIntro1 from '../assets/home/brand_intro_1.jpg'
 import brandIntro3 from '../assets/home/brand_intro_3.jpg'
 
 // Load environment images - Original and Thumbnails
-const lumenFull = import.meta.glob('../assets/environment/lumen/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
+const lumenFull = import.meta.glob('../assets/environment/lumen/*.{jpg,jpeg,png}', {
   eager: true,
   query: '?url',
   import: 'default'
 })
-const lumenThumbs = import.meta.glob('../assets/environment/lumen/thumbnails/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
+const lumenThumbs = import.meta.glob('../assets/environment/lumen/thumbnails/*.{jpg,jpeg,png}', {
   eager: true,
   query: '?url',
   import: 'default'
 })
 
-const nymphFull = import.meta.glob('../assets/environment/nymph/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
+const nymphFull = import.meta.glob('../assets/environment/nymph/*.{jpg,jpeg,png}', {
   eager: true,
   query: '?url',
   import: 'default'
 })
-const nymphThumbs = import.meta.glob('../assets/environment/nymph/thumbnails/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
+const nymphThumbs = import.meta.glob('../assets/environment/nymph/thumbnails/*.{jpg,jpeg,png}', {
   eager: true,
   query: '?url',
   import: 'default'
@@ -46,7 +46,7 @@ const Home: React.FC = () => {
   const currentImageSets = useMemo(() => {
     const fulls = activeTab === 'lumen' ? lumenFull : nymphFull
     const thumbs = activeTab === 'lumen' ? lumenThumbs : nymphThumbs
-    const excludedFiles = ['DSCF3047.JPG', 'IMG_2933.jpeg']
+    const excludedFiles = ['DSCF3047.jpg', 'IMG_2933.jpeg']
     
     const sets: ImageSet[] = []
     

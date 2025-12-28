@@ -3,7 +3,7 @@ import { getStoreData } from '../utils/dataHelpers'
 import './MainMenu.css'
 
 // Import brand environment images
-import lumenBanner from '../assets/environment/lumen/DSCF3047.JPG'
+import lumenBanner from '../assets/environment/lumen/DSCF3047.jpg'
 import nymphBanner from '../assets/environment/nymph/IMG_2933.jpeg'
 
 export default function MainMenu() {
