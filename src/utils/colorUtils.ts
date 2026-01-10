@@ -5,7 +5,7 @@ export interface ImageAnalysis {
 }
 
 export function analyzeImage(src: string): Promise<ImageAnalysis> {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const img = new Image();
     img.crossOrigin = 'Anonymous';
     img.src = src;
