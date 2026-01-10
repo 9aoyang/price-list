@@ -320,9 +320,9 @@ export const nymphPriceData: MainCategory[] = [
               single: [{ type: '单次', price: 9800 }], 
               firstTime: [{ type: '首次体验', price: 4680 }], 
               package: [
-                { type: '疗程价格', price: '25800/6次' }, 
-                { type: '疗程价格', price: '38800/10次' }, 
-                { type: '疗程价格', price: '88000/24次' }
+                { type: '疗程价格', price: '26800/6次' }, 
+                { type: '疗程价格', price: '42800/10次' }, 
+                { type: '疗程价格', price: '89900/24次' }
               ] 
             }
           }

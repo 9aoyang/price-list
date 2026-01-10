@@ -46,7 +46,7 @@ const Home: React.FC = () => {
   const currentImageSets = useMemo(() => {
     const fulls = activeTab === 'lumen' ? lumenFull : nymphFull
     const thumbs = activeTab === 'lumen' ? lumenThumbs : nymphThumbs
-    const excludedFiles = ['DSCF3047.jpg', 'IMG_2933.jpeg']
+    const excludedFiles = ['env_lumen_banner.jpg', 'env_nymph_banner.jpeg']
     
     const sets: ImageSet[] = []
     

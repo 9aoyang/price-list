@@ -1,7 +1,7 @@
 import { useLocation, matchPath } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import lumenBg from '../assets/environment/lumen/DSCF3047.jpg'
-import nymphBg from '../assets/environment/nymph/IMG_2933.jpeg'
+import lumenBg from '../assets/environment/lumen/env_lumen_banner.jpg'
+import nymphBg from '../assets/environment/nymph/env_nymph_banner.jpeg'
 
 export default function GlobalBackground() {
   const location = useLocation()
