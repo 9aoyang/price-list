@@ -45,7 +45,7 @@ export const priceData: MainCategory[] = [
         id: 'sub-1',
         name: 'EMFUSION',
         slogan: '整体激活皮肤组织，全面强化肌肤功能',
-        assetKey: 'lumen/btl/emfusion',
+        assetKey: 'btl/emfusion',
         services: [
           {
             id: 'service-1',
@@ -78,7 +78,7 @@ export const priceData: MainCategory[] = [
         id: 'sub-2',
         name: 'NEW Ultra360',
         slogan: '强化韧带组织，实现全新提升效果',
-        assetKey: 'lumen/btl/ultra360',
+        assetKey: 'btl/ultra360',
         displayMode: 'contain',
         services: [
           {
@@ -145,7 +145,7 @@ export const priceData: MainCategory[] = [
         id: 'sub-4',
         name: 'EMFACE',
         slogan: '重塑抗衰肌群，紧致面部轮廓，面部整体年轻',
-        assetKey: 'lumen/btl/emface',
+        assetKey: 'btl/emface',
         services: [
           {
             id: 'service-7',
@@ -178,12 +178,12 @@ export const priceData: MainCategory[] = [
     id: 'series-2',
     name: 'INDIBA',
     slogan: '448kHz内生热，抗炎修护细胞·紧致塑形',
-    assetKey: 'lumen/indiba',
+    assetKey: 'indiba',
     subCategories: [
       {
         id: 'sub-1',
         name: 'INDIBA身体养护系列',
-        assetKey: 'lumen/indiba',
+        assetKey: 'indiba',
         displayMode: 'contain',
         services: [
           {
@@ -204,7 +204,7 @@ export const priceData: MainCategory[] = [
       {
         id: 'sub-2',
         name: 'INDIBA调理',
-        assetKey: 'lumen/indiba',
+        assetKey: 'indiba',
         displayMode: 'contain',
         services: [
           {
@@ -368,7 +368,7 @@ export const priceData: MainCategory[] = [
       {
         id: 'sub-1',
         name: 'Deluxe-SWISS',
-        assetKey: 'lumen/deluxe_swiss/wishpro',
+        assetKey: 'deluxe_swiss/wishpro',
         displayMode: 'contain',
         services: [
           {

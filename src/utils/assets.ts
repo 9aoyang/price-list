@@ -1,10 +1,5 @@
-// Load assets globally
-const lumenAssets = import.meta.glob('../assets/lumen/**/*.{png,jpg,jpeg}', { 
-  eager: true, 
-  query: '?url',
-  import: 'default'
-}) as Record<string, string>
-const nymphAssets = import.meta.glob('../assets/nymph/**/*.{png,jpg,jpeg}', { 
+// Load assets globally from the common services directory
+const serviceAssets = import.meta.glob('../assets/services/**/*.{png,jpg,jpeg}', { 
   eager: true, 
   query: '?url',
   import: 'default'
@@ -12,17 +7,16 @@ const nymphAssets = import.meta.glob('../assets/nymph/**/*.{png,jpg,jpeg}', {
 
 export function getAssetUrl(key?: string) {
   if (!key) return undefined
-  const isLumen = key.startsWith('lumen')
-  const assets = isLumen ? lumenAssets : nymphAssets
-  // Construct prefix. The keys in assets are relative to THIS file.
-  // src/utils/assets.ts -> ../assets/ resolves to src/assets.
-  const prefix = `../assets/${key}/`
+  
+  // Construct prefix looking into the services directory
+  // src/utils/assets.ts -> ../assets/services/
+  const prefix = `../assets/services/${key}/`
   
   // 1. Try to find a thumbnail first
-  const thumbMatch = Object.keys(assets).find(path => path.startsWith(prefix) && path.includes('/thumbnails/'))
-  if (thumbMatch) return assets[thumbMatch]
+  const thumbMatch = Object.keys(serviceAssets).find(path => path.startsWith(prefix) && path.includes('/thumbnails/'))
+  if (thumbMatch) return serviceAssets[thumbMatch]
   
   // 2. Fallback to first available image
-  const match = Object.keys(assets).find(path => path.startsWith(prefix))
-  return match ? assets[match] : undefined
+  const match = Object.keys(serviceAssets).find(path => path.startsWith(prefix))
+  return match ? serviceAssets[match] : undefined
 }

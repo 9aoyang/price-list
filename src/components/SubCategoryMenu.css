@@ -15,62 +15,116 @@
   background: transparent;
 }
 
-/* === New Header Card Design === */
+/* === 1. Simple Header Design (No Image) === */
+.subcategory-header-simple {
+  margin-bottom: 24px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(139, 124, 108, 0.1);
+}
+
+.subcategory-title.simple {
+  font-size: 1.8em;
+  color: #333;
+  margin: 0;
+  border-left: 4px solid #C5A988;
+  padding-left: 15px;
+  line-height: 1.2;
+}
+
+.subcategory-slogan.simple {
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+  margin: 6px 0 0 0;
+  padding-left: 19px;
+}
+
+
+/* === 2. Banner Header Card Design (With Image) === */
 .subcategory-header-card {
   margin-bottom: 30px;
-  background: #fff;
-  border-radius: 12px;
+  background: #f0f0f0;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(139, 124, 108, 0.08);
-  border: 1px solid rgba(139, 124, 108, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  position: relative;
+  height: 220px; 
   display: flex;
-  flex-direction: column;
+  align-items: flex-end;
 }
 
 .subcategory-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 240px; /* Fixed height for image area */
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #fcfaf8; /* Light background for transparent images */
+  background-size: 100% 100%; 
+  z-index: 1;
 }
 
-.subcategory-image.mode-cover {
-  background-size: cover;
-}
-
-.subcategory-image.mode-contain {
-  background-size: contain;
-  /* Add some padding for contained images so they don't touch edges */
-  background-origin: content-box;
-  padding: 20px;
+.subcategory-header-card:hover .subcategory-image {
+  transform: scale(1.02);
+  transition: transform 0.6s ease;
 }
 
 .subcategory-info {
-  padding: 24px 30px;
-  border-top: 1px solid rgba(139, 124, 108, 0.1);
+  position: relative;
+  z-index: 3; 
+  padding: 24px 32px;
+  width: 100%;
+  background: transparent;
 }
 
 .subcategory-title {
-  font-size: 1.6em;
-  color: #4A4A4A;
+  font-size: 2.2em;
   margin: 0;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  border-left: 3px solid #C5A988;
-  padding-left: 15px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  border-left: 5px solid #C5A988;
+  padding-left: 18px;
+  line-height: 1;
 }
 
 .subcategory-slogan {
-  font-size: 1rem;
-  color: #888;
+  font-size: 1.15rem; /* Slightly larger */
   font-style: italic;
-  font-weight: 300;
-  margin: 8px 0 0 0;
-  padding-left: 18px; /* Align with text start (3px border + 15px padding) */
+  font-weight: 500; /* Bolder text for readability */
+  margin: 10px 0 0 0;
+  padding-left: 23px;
 }
 
-/* Service Grid Styles */
+/* === Dynamic Themes: High Contrast Mode === */
+
+/* Dark Background -> Light Text */
+.subcategory-header-card.text-light .subcategory-title {
+  color: #ffffff;
+  /* Stronger shadow for separation */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+.subcategory-header-card.text-light .subcategory-slogan {
+  color: #ffffff;
+  /* Double shadow layer for maximum readability without mask */
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* Light Background -> Dark Text */
+.subcategory-header-card.text-dark .subcategory-title {
+  color: #1a1a1a;
+  border-left-color: #B59B78;
+  /* White glow to separate from busy light backgrounds */
+  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+.subcategory-header-card.text-dark .subcategory-slogan {
+  color: #222222; /* Darker grey */
+  /* White halo effect */
+  text-shadow: 0 0 5px rgba(255,255,255,1), 0 0 2px rgba(255,255,255,1);
+}
+
+
+/* --- Grid & Cards --- */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -81,9 +135,7 @@
   background: white;
   border-radius: 16px;
   padding: 24px;
-  box-shadow: 
-    0 2px 8px rgba(139, 124, 108, 0.05),
-    0 1px 2px rgba(139, 124, 108, 0.1);
+  box-shadow: 0 2px 8px rgba(139, 124, 108, 0.05), 0 1px 2px rgba(139, 124, 108, 0.1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 1px solid rgba(139, 124, 108, 0.1);
   cursor: pointer;
@@ -95,9 +147,7 @@
 
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 
-    0 8px 24px rgba(139, 124, 108, 0.12),
-    0 2px 6px rgba(139, 124, 108, 0.08);
+  box-shadow: 0 8px 24px rgba(139, 124, 108, 0.12);
   border-color: rgba(139, 124, 108, 0.3);
 }
 
@@ -122,48 +172,19 @@
   font-size: 1.1em;
   color: #B59B78;
   font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 @keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
-  .subcategory-menu {
-    padding: 24px 16px;
-  }
-
-  .subcategory-header-card {
-    margin-bottom: 20px;
-  }
-
-  .subcategory-image {
-    height: 180px;
-  }
-  
-  .subcategory-info {
-    padding: 20px;
-  }
-
-  .subcategory-title {
-    font-size: 1.4em;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .service-card {
-    padding: 20px;
-  }
+  .subcategory-menu { padding: 24px 16px; }
+  .subcategory-header-card { margin-bottom: 20px; height: 180px; }
+  .subcategory-info { padding: 20px; }
+  .subcategory-title { font-size: 1.8em; }
+  .subcategory-header-simple { margin-bottom: 16px; }
+  .subcategory-title.simple { font-size: 1.5em; }
+  .service-grid { grid-template-columns: 1fr; gap: 16px; }
 }

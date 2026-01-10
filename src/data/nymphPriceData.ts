@@ -6,7 +6,7 @@ export const nymphPriceData: MainCategory[] = [
     id: 'n-series-2',
     name: 'Basic Facial',
     slogan: '温和清洁补水·稳护健康肤质',
-    assetKey: 'nymph/basic_facial',
+    assetKey: 'basic_facial',
     subCategories: [
       {
         id: 'n-sub-2-1',
@@ -71,7 +71,7 @@ export const nymphPriceData: MainCategory[] = [
     id: 'n-series-1',
     name: 'Basic Body',
     slogan: '舒缓塑形养护·焕新肌理质感',
-    assetKey: 'nymph/basic_body',
+    assetKey: 'basic_body',
     subCategories: [
       {
         id: 'n-sub-1-1',
@@ -131,7 +131,7 @@ export const nymphPriceData: MainCategory[] = [
     id: 'n-series-3',
     name: 'Bespoke Facial',
     slogan: '针对性改善·优化肌肤状态',
-    assetKey: 'nymph/bespoke_facial',
+    assetKey: 'bespoke_facial',
     subCategories: [
       {
         id: 'n-sub-3-1',
@@ -185,7 +185,7 @@ export const nymphPriceData: MainCategory[] = [
       {
         id: 'n-sub-6-1',
         name: 'Deluxe-SWISS',
-        assetKey: 'nymph/deluxe_swiss/wishpro',
+        assetKey: 'deluxe_swiss/wishpro',
         displayMode: 'contain',
         services: [
           {
@@ -251,7 +251,7 @@ export const nymphPriceData: MainCategory[] = [
         id: 'n-sub-4-1',
         name: 'EMFUSION',
         slogan: '整体激活皮肤组织，全面强化肌肤功能',
-        assetKey: 'nymph/btl/emfusion',
+        assetKey: 'btl/emfusion',
         services: [
            {
             id: 'n-service-4-1',
@@ -284,7 +284,7 @@ export const nymphPriceData: MainCategory[] = [
         id: 'n-sub-4-2',
         name: 'NEW Ultra360',
         slogan: '强化韧带组织，实现全新提升效果',
-        assetKey: 'nymph/btl/ultra360',
+        assetKey: 'btl/ultra360',
         displayMode: 'contain',
         services: [
           {
@@ -351,7 +351,7 @@ export const nymphPriceData: MainCategory[] = [
         id: 'n-sub-4-4',
         name: 'EMFACE',
         slogan: '重塑抗衰肌群，紧致面部轮廓，面部整体年轻',
-        assetKey: 'nymph/btl/emface',
+        assetKey: 'btl/emface',
         services: [
            {
             id: 'n-service-4-7',
@@ -382,7 +382,7 @@ export const nymphPriceData: MainCategory[] = [
     id: 'n-series-5',
     name: 'celllight',
     slogan: '匀净提亮肤色·焕活健康肤态',
-    assetKey: 'nymph/celllight',
+    assetKey: 'celllight',
     subCategories: [
       {
         id: 'n-sub-5-1',
@@ -415,7 +415,7 @@ export const nymphPriceData: MainCategory[] = [
     id: 'n-series-7',
     name: '精致美肌',
     slogan: '温和无痛脱毛·持久光滑嫩肤',
-    assetKey: 'nymph/smooth',
+    assetKey: 'smooth',
     subCategories: [
       {
         id: 'n-sub-7-1',
